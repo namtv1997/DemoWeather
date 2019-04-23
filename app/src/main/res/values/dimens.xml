@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_height">56dp</dimen>
+
+    <dimen name="matching_view_page_margin">10dp</dimen>
+
+    <dimen name="button_height">50dp</dimen>
+    <dimen name="button_width">180dp</dimen>
+    <dimen name="button_active_width">100dp</dimen>
+    <dimen name="button_active_height">40dp</dimen>
+
+    <dimen name="border_round">300dp</dimen>
+    <dimen name="border_soft">10dp</dimen>
+    <dimen name="border_hard">4dp</dimen>
+    <dimen name="border_booking">10dp</dimen>
+    <dimen name="boder_view">0.1dp</dimen>
+
+    <dimen name="splash_logo_size">80dp</dimen>
+
+    <dimen name="avatar_profile_size">100dp</dimen>
+
+    <dimen name="icon_size_large">70dp</dimen>
+    <dimen name="icon_coworking_avatar">50dp</dimen>
+    <dimen name="icon_size_normal">30dp</dimen>
+    <dimen name="icon_size_small">20dp</dimen>
+    <dimen name="icon_size_button">48dp</dimen>
+
+    <dimen name="spacing_giant1">65dp</dimen>
+    <dimen name="spacing_giant">56dp</dimen>
+    <dimen name="spacing_huge">48dp</dimen>
+    <dimen name="spacing_large">32dp</dimen>
+    <dimen name="spacing_normal">24dp</dimen>
+    <dimen name="spacing_small">16dp</dimen>
+    <dimen name="spacing_tiny">8dp</dimen>
+    <dimen name="spacing_micro">4dp</dimen>
+
+    <dimen name="font_giant">32sp</dimen>
+    <dimen name="font_huge">24sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_normal">16sp</dimen>
+    <dimen name="font_small">14sp</dimen>
+    <dimen name="font_tiny">12sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="logo_size_coworking_height">50dp</dimen>
+    <dimen name="logo_size_coworking_width">80dp</dimen>
+
+    <dimen name="image_cover_size_square">130dp</dimen>
+    <dimen name="image_thumbnail_height_map">120dp</dimen>
+    <dimen name="image_thumbnail_width_map">160dp</dimen>
+    <dimen name="image_thumbnail_size_coworking">130dp</dimen>
+
+    <dimen name="thumbnail_height_work_place">100dp</dimen>
+    <dimen name="thumbnail_width_workplace">170dp</dimen>
+
+    <dimen name="padding_bg_booking_gradient">5dp</dimen>
+    <dimen name="padding_list_coworking">80dp</dimen>
+
+    <dimen name="margin_detail_coworking">10dp</dimen>
+
+    <dimen name="vp_height">500dp</dimen>
+    <dimen name="line_view_height">1dp</dimen>
+
+    <dimen name="review_progressbar_size">35dp</dimen>
+    <dimen name="view_height_alert_verify">70dp</dimen>
+    <dimen name="bg_map_height">210dp</dimen>
+    <dimen name="discrete_scroll_view_height">220dp</dimen>
+
+    <dimen name="stroke_width">1dp</dimen>
+
+    <dimen name="label_width">130dp</dimen>
+
+</resources>

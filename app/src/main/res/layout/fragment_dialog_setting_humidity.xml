@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_small"
+    tools:context=".dialog.DialogSettingWinSpeedFragment">
+
+    <TextView
+        style="@style/TextContentLarge"
+        android:text="@string/label_humidity" />
+
+    <RadioGroup
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            style="@style/TextContentLarge"
+            android:paddingStart="@dimen/spacing_tiny"
+            android:buttonTint="@color/blue"
+            android:layoutDirection="ltr"
+            android:text="@string/label_radio_relative" />
+
+        <RadioButton
+            style="@style/TextContentLarge"
+            android:paddingStart="@dimen/spacing_tiny"
+            android:buttonTint="@color/blue"
+            android:layoutDirection="ltr"
+            android:text="@string/label_radio_absolute" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvLabelCancel"
+        android:paddingEnd="@dimen/spacing_large"
+        android:layout_gravity="end"
+        style="@style/TextContentHuge"
+        android:text="@string/label_cancel" />
+
+</LinearLayout>

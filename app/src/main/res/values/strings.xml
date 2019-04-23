@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">WeatherOnline</string>
+    <string name="label_wind">Wind</string>
+    <string name="label_rain">Rain</string>
+    <string name="label_humidity">Humidity</string>
+    <string name="label_temperature">Temperature</string>
+    <string name="label_windspeed">Wind Speed</string>
+    <string name="label_km">km/h</string>
+    <string name="label_setting">Settings</string>
+    <string name="label_percent">%</string>
+    <string name="label_empty_search_city">No Matches</string>
+    <string name="label_radio_relative">% - Relative humidity</string>
+    <string name="label_radio_c_degree">ºC - Celsius degree</string>
+    <string name="label_radio_f_degree">ºF - Fahreinheit degree</string>
+    <string name="label_radio_k_degree">ºK - Kevin degree</string>
+    <string name="label_radio_absolute">g/m3 - Absolute humidity</string>
+    <string name="label_radio_wind_km">km/h - Metric unit</string>
+    <string name="label_radio_wind_mile">miles/h - Imperal unit</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="hint_enter_the_city">Enter The City or ZIP Code</string>
+    <string name="error_message_lost_internet_connection">Unable to connect. Please check that you are connected to the
+        Internet and try again.
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.weather.SettingActivity">
+
+    <include
+        android:id="@+id/includetoolbarSetting"
+        layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/llTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_small"
+        app:layout_constraintTop_toBottomOf="@id/includetoolbarSetting">
+
+        <TextView
+            android:id="@+id/tvLabelTemperature"
+            style="@style/TextContentHuge"
+            android:text="@string/label_temperature" />
+
+        <TextView
+            style="@style/TextContentLarge"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:text="@string/label_radio_c_degree" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/ViewLineGray"
+        app:layout_constraintBottom_toBottomOf="@+id/llTemperature"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/llHumidity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_small"
+        app:layout_constraintTop_toBottomOf="@id/llTemperature">
+
+        <TextView
+            android:id="@+id/tvLabelHumidity"
+            style="@style/TextContentHuge"
+            android:text="@string/label_humidity" />
+
+        <TextView
+            style="@style/TextContentLarge"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:text="@string/label_radio_relative" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/ViewLineGray"
+        app:layout_constraintBottom_toBottomOf="@id/llHumidity"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/llWindSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_small"
+        app:layout_constraintTop_toBottomOf="@id/llHumidity">
+
+        <TextView
+            android:id="@+id/tvLabelWindSpeed"
+            style="@style/TextContentHuge"
+            android:text="@string/label_windspeed" />
+
+        <TextView
+            style="@style/TextContentLarge"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:text="@string/label_radio_wind_km" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/ViewLineGray"
+        app:layout_constraintBottom_toBottomOf="@+id/llWindSpeed"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvLabelAbout"
+        style="@style/TextContentHuge"
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/spacing_small"
+        android:paddingTop="@dimen/spacing_large"
+        android:paddingBottom="@dimen/spacing_large"
+        android:text="About"
+        app:layout_constraintTop_toBottomOf="@id/llWindSpeed" />
+
+    <View
+        style="@style/ViewLineGray"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLabelAbout"
+        tools:ignore="MissingConstraints" />
+
+
+</android.support.constraint.ConstraintLayout>

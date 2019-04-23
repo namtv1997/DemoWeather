@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    android:orientation="vertical"
+    tools:context=".ui.weather.MainActivity">
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/bg_weather_infor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d45e5e">
+
+
+        <TextView
+            android:id="@+id/tvLabelYear"
+            style="@style/TextContentLarge"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:text="2019"
+            android:textColor="@color/white"
+            android:textSize="46sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/Devider1"
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/spacing_micro"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabelYear"
+            app:layout_constraintLeft_toRightOf="@id/tvLabelYear"
+            app:layout_constraintTop_toTopOf="@id/tvLabelYear"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            style="@style/TextContentNormal"
+            android:paddingStart="@dimen/spacing_tiny"
+            android:paddingTop="@dimen/spacing_normal"
+            android:text="Monday"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large"
+            app:layout_constraintLeft_toRightOf="@id/Devider1"
+            app:layout_constraintTop_toTopOf="@id/imageView"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            style="@style/TextContentNormal"
+            android:paddingStart="@dimen/spacing_tiny"
+            android:text="April-22"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabelYear"
+            app:layout_constraintLeft_toRightOf="@id/Devider1"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            android:src="@drawable/ic_reset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLabelLocation"
+            style="@style/TextContentLarge"
+            android:paddingTop="@dimen/spacing_huge"
+            android:text="Hanoi"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+        <ImageView
+            android:id="@+id/ivSttWeather"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:src="@drawable/ic_sun"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelLocation" />
+
+        <TextView
+            android:id="@+id/tvDegree"
+            style="@style/TextContentLarge"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:paddingStart="@dimen/spacing_giant1"
+            android:text="39º"
+            android:textColor="@color/white"
+            android:textSize="70sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivSttWeather"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvWindSpeed"
+            style="@style/TextContentLarge"
+            android:paddingStart="@dimen/spacing_giant"
+            android:paddingTop="@dimen/spacing_normal"
+            android:text="0mph"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_giant"
+            app:layout_constraintLeft_toRightOf="@id/tvDegree"
+            app:layout_constraintTop_toBottomOf="@id/ivSttWeather"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            style="@style/TextContentLarge"
+            android:paddingStart="@dimen/spacing_giant"
+            android:text="64%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_giant"
+            app:layout_constraintLeft_toRightOf="@id/tvDegree"
+            app:layout_constraintTop_toBottomOf="@id/tvWindSpeed"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvTueDay"
+            style="@style/TextContentLarge"
+            android:layout_marginStart="@dimen/spacing_huge"
+            android:paddingTop="@dimen/spacing_huge"
+            android:text="TUE"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_huge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDegree" />
+
+        <ImageView
+            android:id="@+id/ivSttTue"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            android:src="@drawable/ic_sun"
+            app:layout_constraintLeft_toLeftOf="@id/tvTueDay"
+            app:layout_constraintTop_toBottomOf="@id/tvTueDay" />
+
+        <TextView
+            style="@style/TextContentLarge"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:text="37º"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_huge"
+            app:layout_constraintLeft_toLeftOf="@id/tvTueDay"
+            app:layout_constraintTop_toBottomOf="@id/ivSttTue" />
+
+        <TextView
+            android:id="@+id/tvWednesday"
+            style="@style/TextContentLarge"
+            android:layout_marginStart="@dimen/spacing_huge"
+            android:paddingTop="@dimen/spacing_huge"
+            android:text="WED"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_huge"
+            app:layout_constraintLeft_toRightOf="@id/tvTueDay"
+            app:layout_constraintTop_toBottomOf="@id/tvDegree" />
+
+        <ImageView
+            android:id="@+id/ivSttWed"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            android:src="@drawable/ic_sun"
+            app:layout_constraintLeft_toLeftOf="@id/tvWednesday"
+            app:layout_constraintTop_toBottomOf="@id/tvWednesday" />
+
+        <TextView
+            style="@style/TextContentLarge"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:text="36º"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_huge"
+            app:layout_constraintLeft_toLeftOf="@id/tvWednesday"
+            app:layout_constraintTop_toBottomOf="@id/ivSttWed" />
+
+        <TextView
+            android:id="@+id/tvThurday"
+            style="@style/TextContentLarge"
+            android:layout_marginStart="@dimen/spacing_huge"
+            android:paddingTop="@dimen/spacing_huge"
+            android:text="THU"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_huge"
+            app:layout_constraintLeft_toRightOf="@id/tvWednesday"
+            app:layout_constraintTop_toBottomOf="@id/tvDegree" />
+
+        <ImageView
+            android:id="@+id/ivSttThu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            android:src="@drawable/ic_sun"
+            app:layout_constraintLeft_toLeftOf="@id/tvThurday"
+            app:layout_constraintTop_toBottomOf="@id/tvThurday" />
+
+        <TextView
+            style="@style/TextContentLarge"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:text="39º"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_huge"
+            app:layout_constraintLeft_toLeftOf="@id/tvThurday"
+            app:layout_constraintTop_toBottomOf="@id/ivSttThu" />
+
+        <TextView
+            android:id="@+id/tvFriDay"
+            style="@style/TextContentLarge"
+            android:layout_marginStart="@dimen/spacing_huge"
+            android:paddingTop="@dimen/spacing_huge"
+            android:text="FRI"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_huge"
+            app:layout_constraintLeft_toRightOf="@id/tvThurday"
+            app:layout_constraintTop_toBottomOf="@id/tvDegree" />
+
+        <ImageView
+            android:id="@+id/ivSttFri"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            android:src="@drawable/ic_sun"
+            app:layout_constraintLeft_toLeftOf="@id/tvFriDay"
+            app:layout_constraintTop_toBottomOf="@id/tvFriDay" />
+
+        <TextView
+            style="@style/TextContentLarge"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:text="34º"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_huge"
+            app:layout_constraintLeft_toLeftOf="@id/tvFriDay"
+            app:layout_constraintTop_toBottomOf="@id/ivSttFri" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:padding="@dimen/spacing_normal">
+
+        <LinearLayout
+            android:id="@+id/llSearch"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint="@string/hint_enter_the_city"
+                android:textSize="@dimen/font_large" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_search" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/DeviderSearch"
+            style="@style/ViewLineGray"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            app:layout_constraintTop_toBottomOf="@id/llSearch"
+            tools:ignore="MissingConstraints" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvItemLocation"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/DeviderSearch" />
+
+        <View
+            android:id="@+id/Devider2"
+            style="@style/ViewLineGray"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            app:layout_constraintTop_toBottomOf="@id/rvItemLocation"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvLabelSetting"
+            style="@style/TextContentLarge"
+            android:paddingTop="@dimen/spacing_small"
+            android:text="@string/label_setting"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Devider2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.DrawerLayout>
