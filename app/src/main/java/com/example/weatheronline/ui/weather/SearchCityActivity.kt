@@ -7,27 +7,66 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import com.example.mockproject.retrofit2.DataClient
+import com.example.mockproject.retrofit2.RetrofitClient
+import com.example.weatheronline.R
 import com.example.weatheronline.adapter.SearchCityAdapter
 import com.example.weatheronline.base.BaseActivity
 import com.example.weatheronline.common.Common
 import com.example.weatheronline.model.cityresult.CityResult
 import com.example.weatheronline.viewmodel.WeatherViewmodel
+import com.jakewharton.rxbinding2.widget.RxTextView
+import com.jakewharton.rxbinding2.widget.TextViewTextChangeEvent
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.observers.DisposableObserver
+import io.reactivex.schedulers.Schedulers
+import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.activity_search_city.*
+import java.util.concurrent.TimeUnit
 
 
-class SearchCityActivity : BaseActivity() {
-
+class SearchCityActivity : BaseActivity(), View.OnClickListener {
 
     private lateinit var weatherViewModel: WeatherViewmodel
-    private var listNameCity = ArrayList<CityResult>()
-    var listCities: List<String>? = null
     private lateinit var AdapterSearchCity: SearchCityAdapter
+
+    private val publishSubject = PublishSubject.create<String>()
+    private var listNameCity = ArrayList<CityResult>()
+    private val disposable = CompositeDisposable()
+
+    private var dataClient: DataClient = RetrofitClient.getClient()?.create(DataClient::class.java)!!
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.example.weatheronline.R.layout.activity_search_city)
 
+        initAdapter()
+
+        val observer = getSearchObserver()
+
+        disposable.add(
+            publishSubject.debounce(300, TimeUnit.MILLISECONDS)
+                .distinctUntilChanged()
+                .switchMapSingle {
+                    dataClient.getWeatherDatabyCity(Common.API_Key, it)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread());
+                }
+                .subscribeWith(observer)
+        )
+
+        disposable.add(
+            RxTextView.textChangeEvents(edtSearch!!)
+                .skipInitialValue()
+                .debounce(300, TimeUnit.MILLISECONDS)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(searchCityTextWatcher())
+        )
+
+        disposable.add(observer)
 
         edtSearch.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
@@ -50,36 +89,68 @@ class SearchCityActivity : BaseActivity() {
             }
         })
 
-        ivCancel.setOnClickListener {
-            edtSearch.setText("")
-        }
+        ivCancel.setOnClickListener(this)
+        ivBack.setOnClickListener(this)
 
     }
 
-
-
-
-    private fun getDataByCity(nameOfCity: String) {
-        weatherViewModel = ViewModelProviders.of(this).get(WeatherViewmodel::class.java).apply {
-            city.observe(this@SearchCityActivity, android.arch.lifecycle.Observer {
-                if (it != null) {
-                    Log.d("dd", "ketqua")
-                    listNameCity = it as ArrayList<CityResult>
-                    AdapterSearchCity = SearchCityAdapter(listNameCity)
-                    rvSearchCity.apply {
-                        setHasFixedSize(true)
-                        layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-                        adapter = AdapterSearchCity
-                        AdapterSearchCity.notifyDataSetChanged()
-                    }
-                }
-            })
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.ivBack -> {
+                finish()
+            }
+            R.id.ivCancel -> {
+                edtSearch.setText("")
+            }
         }
-
-        weatherViewModel.getDataWeatherByCity(Common.API_Key, nameOfCity)
     }
 
+    private fun searchCityTextWatcher(): DisposableObserver<TextViewTextChangeEvent> {
+        return object : DisposableObserver<TextViewTextChangeEvent>() {
+            override fun onNext(textViewTextChangeEvent: TextViewTextChangeEvent) {
+                publishSubject.onNext(textViewTextChangeEvent.text().toString())
+            }
 
+            override fun onError(e: Throwable) {
+            }
+
+            override fun onComplete() {
+
+            }
+        }
+    }
+
+    private fun initAdapter() {
+        AdapterSearchCity = SearchCityAdapter(listNameCity)
+        rvSearchCity.apply {
+            setHasFixedSize(true)
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            adapter = AdapterSearchCity
+            AdapterSearchCity.notifyDataSetChanged()
+        }
+    }
+
+    private fun getSearchObserver(): DisposableObserver<List<CityResult>> {
+        return object : DisposableObserver<List<CityResult>>() {
+            override fun onNext(contacts: List<CityResult>) {
+                listNameCity.clear()
+                listNameCity.addAll(contacts)
+                AdapterSearchCity.notifyDataSetChanged()
+            }
+
+            override fun onError(e: Throwable) {
+            }
+
+            override fun onComplete() {
+
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        disposable.clear()
+    }
 }
 
 

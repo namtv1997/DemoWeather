@@ -55,5 +55,5 @@ dependencies {
     def work_version = "1.0.0-beta02"
     implementation "android.arch.work:work-runtime-ktx:$work_version"
     implementation "com.github.mancj:MaterialSearchBar:0.8.2"
-    implementation'com.label305:asynctask:1.0.0'
+    implementation "com.jakewharton.rxbinding2:rxbinding:2.0.0"
 }

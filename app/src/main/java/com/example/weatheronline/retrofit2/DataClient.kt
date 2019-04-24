@@ -4,6 +4,7 @@ import com.example.weatheronline.model.weatherresult.WeatherResult
 import com.example.weatheronline.model.cityresult.CityResult
 import com.example.weatheronline.model.weathercurentday.WeatherCurent
 import io.reactivex.Observable
+import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -28,6 +29,6 @@ interface DataClient {
     fun getWeatherDatabyCity(
         @Query("apikey") apikey: String,
         @Query("q") q: String
-    ): Observable<List<CityResult>>
+    ): Single<List<CityResult>>
 
 }
