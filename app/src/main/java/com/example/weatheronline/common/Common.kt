@@ -1,5 +1,7 @@
 package com.example.weatheronline.common
 
 object Common {
-  const val API_Key:String ="88e44ee33f4cd47be02b741ce216a476"
+  const val API_Key:String ="p9RZ7cqPp1AYYKc5b6kXR3NFiZr3kKeV"
+  const val API_Key1:String ="JpV3XPBHu3X4Jy12xXHI9IfePT4TLcUn"
+   var ID_NAME_CITY ="12345"
 }

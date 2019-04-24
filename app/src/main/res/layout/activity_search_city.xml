@@ -10,16 +10,35 @@
         android:id="@+id/toolbarSearchCity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
         android:background="#e9e9e9"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.mancj.materialsearchbar.MaterialSearchBar
-            style="@style/MaterialSearchBarLight"
-            app:mt_hint="@string/hint_enter_the_city"
-            android:id="@+id/search_bar"
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back" />
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_weight="8"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_width="match_parent"/>
+            android:background="@android:color/transparent"
+            android:hint="@string/hint_enter_the_city" />
+
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_delete" />
 
     </LinearLayout>
 

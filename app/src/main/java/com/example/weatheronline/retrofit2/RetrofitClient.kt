@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitClient {
     companion object {
         var retrofit: Retrofit? = null
-        const val URL_REAL = "http://api.openweathermap.org/data/2.5/"
+        const val URL_REAL = "http://dataservice.accuweather.com/"
         fun getClient(): Retrofit? {
             val interceptor = HttpLoggingInterceptor()
             interceptor.level = HttpLoggingInterceptor.Level.BODY
