@@ -1,14 +1,14 @@
 package com.example.weatheronline.model.weathercurentday
 
-import com.example.weatheronline.model.weatherresult.Speed
+import com.example.weatheronline.model.weatherresult.SpeedDouble
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class SpeedCurrent (
+class SpeedCurent (
     @SerializedName("Metric")
     @Expose
-    val metric: Speed = Speed(),
+    val metric: SpeedDouble = SpeedDouble(),
     @SerializedName("Imperial")
     @Expose
-    val imperial: Speed = Speed()
+    val imperial: SpeedDouble = SpeedDouble()
 )

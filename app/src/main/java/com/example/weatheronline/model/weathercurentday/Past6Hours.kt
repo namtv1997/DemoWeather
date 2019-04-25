@@ -7,8 +7,8 @@ import com.google.gson.annotations.SerializedName
 class Past6Hours (
     @SerializedName("Metric")
     @Expose
-    val metric: Speed = Speed(),
+    val metric: SpeedCurent = SpeedCurent(),
     @SerializedName("Imperial")
     @Expose
-    val imperial: Speed = Speed()
+    val imperial: SpeedCurent = SpeedCurent()
 )

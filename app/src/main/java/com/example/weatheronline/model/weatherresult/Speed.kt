@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 class Speed(
     @SerializedName("Value")
     @Expose
-    val value: Double? = null,
+    val value: Int? = null,
 
     @SerializedName("Unit")
     @Expose

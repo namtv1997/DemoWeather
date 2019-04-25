@@ -7,8 +7,8 @@ import com.google.gson.annotations.SerializedName
 class WetBulbTemperature (
     @SerializedName("Metric")
     @Expose
-    val metric: Speed = Speed(),
+    val metric: SpeedCurent = SpeedCurent(),
     @SerializedName("Imperial")
     @Expose
-    val imperial: Speed = Speed()
+    val imperial: SpeedCurent = SpeedCurent()
 )

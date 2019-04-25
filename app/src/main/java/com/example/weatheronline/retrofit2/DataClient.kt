@@ -11,19 +11,20 @@ import retrofit2.http.Query
 
 
 interface DataClient {
-    @GET("forecasts/v1/daily/5day/{key}")
+    @GET("forecasts/v1/daily/5day/{keyRegion}")
     fun getWeatherData5Days(
-        @Path("lat") lat: Double,
-        @Query("apikey") lon: String,
+        @Path("keyRegion") keyRegion: String,
+        @Query("apikey") apikey: String,
         @Query("details") details: Boolean
     ): Observable<WeatherResult>
 
-    @GET("/currentconditions/v1/353412")
+    @GET("/currentconditions/v1/{keyRegion}")
     fun getWeatherDataCurrent(
-        @Path("lat") lat: Double,
-        @Query("apikey") lon: String,
+        @Path("keyRegion") keyRegion: String,
+        @Query("apikey") apikey: String,
         @Query("details") details: Boolean
-    ): Observable<WeatherCurent>
+    ): Observable<List<WeatherCurent>>
+
 
     @GET("locations/v1/cities/autocomplete")
     fun getWeatherDatabyCity(

@@ -3,7 +3,7 @@ package com.example.weatheronline.model.weatherresult
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class TotalLiquid (
+class SpeedDouble (
     @SerializedName("Value")
     @Expose
     val value: Double? = null,

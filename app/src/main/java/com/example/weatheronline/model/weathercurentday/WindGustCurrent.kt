@@ -6,5 +6,5 @@ import com.google.gson.annotations.SerializedName
 class WindGustCurrent(
     @SerializedName("Speed")
     @Expose
-    val speed: SpeedCurrent = SpeedCurrent()
+    val speed: SpeedCurent = SpeedCurent()
 )

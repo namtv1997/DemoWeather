@@ -22,5 +22,5 @@ class AirAndPollen(
 
     @SerializedName("Type")
     @Expose
-   val type:Int?=null
+   val type:String?=null
 )
