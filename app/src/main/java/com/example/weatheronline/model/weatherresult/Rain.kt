@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 class Rain(
     @SerializedName("Value")
     @Expose
-    val value: Int? = null,
+    val value: Double? = null,
 
     @SerializedName("Unit")
     @Expose

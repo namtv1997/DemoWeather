@@ -147,6 +147,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvTueDay" />
 
         <TextView
+            android:id="@+id/tvTempDay1"
             style="@style/TextContentLarge"
             android:paddingTop="@dimen/spacing_tiny"
             android:text="37º"
@@ -176,6 +177,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvWednesday" />
 
         <TextView
+            android:id="@+id/tvTempDay2"
             style="@style/TextContentLarge"
             android:paddingTop="@dimen/spacing_tiny"
             android:text="36º"
@@ -205,6 +207,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvThurday" />
 
         <TextView
+            android:id="@+id/tvTempDay3"
             style="@style/TextContentLarge"
             android:paddingTop="@dimen/spacing_tiny"
             android:text="39º"
@@ -234,6 +237,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvFriDay" />
 
         <TextView
+            android:id="@+id/tvTempDay4"
             style="@style/TextContentLarge"
             android:paddingTop="@dimen/spacing_tiny"
             android:text="34º"

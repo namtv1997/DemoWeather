@@ -69,17 +69,13 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
             }
         })
 
-
-
-
-
         val observer = getSearchObserver()
 
         disposable.add(
             publishSubject.debounce(300, TimeUnit.MILLISECONDS)
                 .distinctUntilChanged()
                 .switchMapSingle {
-                    dataClient.getWeatherDatabyCity(Common.API_Key4, it)
+                    dataClient.getWeatherDatabyCity(Common.API_Key5, it)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread());
                 }

@@ -46,7 +46,7 @@ class DailyForecast(
 
     @SerializedName("Day")
     @Expose
-    val day: Day = Day(),
+    val day: Day5Day = Day5Day(),
     @SerializedName("Night")
     @Expose
     val night:Night=Night(),

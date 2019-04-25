@@ -17,7 +17,6 @@ class WeatherViewmodel : ViewModel() {
     private val disposables = CompositeDisposable()
     val weather = MutableLiveData<WeatherResult>()
     val weatherCurrent = MutableLiveData<List<WeatherCurent>>()
-    val city = MutableLiveData<List<CityResult>>()
     val errorMsg: MutableLiveData<Int> = MutableLiveData()
     private var dataClient: DataClient = RetrofitClient.getClient()?.create(DataClient::class.java)!!
 
@@ -40,8 +39,10 @@ class WeatherViewmodel : ViewModel() {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
+                    Log.d("ff","run hear 5 day")
                     weather.postValue(it)
                 }, {
+                    Log.d("ff",it.message.toString())
                     errorMsg.postValue(R.string.error_message_lost_internet_connection)
                 })
         )

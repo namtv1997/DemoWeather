@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 class Minimum(
     @SerializedName("Value")
     @Expose
-    val value: Int? = null,
+    val value: Float? = null,
 
     @SerializedName("Unit")
     @Expose

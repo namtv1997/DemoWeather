@@ -3,7 +3,7 @@ package com.example.weatheronline.model.weatherresult
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class WindGust (
+class Wind5days (
     @SerializedName("Speed")
     @Expose
     val speed: SpeedDouble = SpeedDouble(),
