@@ -38,6 +38,7 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
+            android:id="@+id/tvDay"
             style="@style/TextContentNormal"
             android:paddingStart="@dimen/spacing_tiny"
             android:paddingTop="@dimen/spacing_normal"
@@ -60,6 +61,7 @@
             tools:ignore="RtlSymmetry" />
 
         <ImageView
+            android:id="@+id/ivRefresh"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="@dimen/spacing_large"

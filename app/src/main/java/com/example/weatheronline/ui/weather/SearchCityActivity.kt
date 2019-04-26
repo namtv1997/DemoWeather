@@ -1,13 +1,12 @@
 package com.example.weatheronline.ui.weather
 
 
-import android.arch.lifecycle.ViewModelProviders
+
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import com.example.mockproject.retrofit2.DataClient
 import com.example.mockproject.retrofit2.RetrofitClient
@@ -17,8 +16,6 @@ import com.example.weatheronline.adapter.SearchCityAdapter
 import com.example.weatheronline.base.BaseActivity
 import com.example.weatheronline.common.Common
 import com.example.weatheronline.model.cityresult.CityResult
-import com.example.weatheronline.model.weathercurentday.WeatherCurent
-import com.example.weatheronline.viewmodel.WeatherViewmodel
 import com.jakewharton.rxbinding2.widget.RxTextView
 import com.jakewharton.rxbinding2.widget.TextViewTextChangeEvent
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -75,9 +72,9 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
             publishSubject.debounce(300, TimeUnit.MILLISECONDS)
                 .distinctUntilChanged()
                 .switchMapSingle {
-                    dataClient.getWeatherDatabyCity(Common.API_Key5, it)
+                    dataClient.getWeatherDatabyCity(Common.API_Key9, it)
                         .subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread());
+                        .observeOn(AndroidSchedulers.mainThread())
                 }
                 .subscribeWith(observer)
         )
@@ -140,20 +137,16 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
                 AdapterSearchCity.notifyDataSetChanged()
             }
 
-            override fun onError(e: Throwable) {
-            }
+            override fun onError(e: Throwable) {}
 
-            override fun onComplete() {
-
-            }
+            override fun onComplete() {}
         }
     }
 
-    override fun onItemClick(listCity: ArrayList<CityResult>, position: Int) {
+    override fun onItemClick(city: CityResult) {
         val intent = Intent(this, MainActivity::class.java)
         val bundle = Bundle()
-        bundle.putParcelableArrayList("dataCity", listCity)
-        bundle.putInt("position", position)
+        bundle.putParcelable("dataCity", city)
         intent.putExtras(bundle)
         startActivity(intent)
 

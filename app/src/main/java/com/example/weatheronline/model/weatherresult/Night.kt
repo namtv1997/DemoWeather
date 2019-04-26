@@ -62,19 +62,19 @@ class Night(
 
     @SerializedName("HoursOfPrecipitation")
     @Expose
-    val hoursOfPrecipitation: Int? = null,
+    val hoursOfPrecipitation: Double? = null,
 
     @SerializedName("HoursOfRain")
     @Expose
-    val hoursOfRain: Int? = null,
+    val hoursOfRain: Double? = null,
 
     @SerializedName("HoursOfSnow")
     @Expose
-    val hoursOfSnow: Int? = null,
+    val hoursOfSnow: Double? = null,
 
     @SerializedName("HoursOfIce")
     @Expose
-    val hoursOfIce: Int? = null,
+    val hoursOfIce: Double? = null,
 
     @SerializedName("CloudCover")
     @Expose

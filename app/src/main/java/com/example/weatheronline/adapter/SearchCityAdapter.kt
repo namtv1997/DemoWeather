@@ -24,7 +24,7 @@ class SearchCityAdapter(private var listCity: ArrayList<CityResult>, var onclick
     override fun onBindViewHolder(holdel: ViewHodel, position: Int) {
         holdel.bind(listCity[position])
         holdel.itemView.setOnClickListener {
-            onclickiItemListener.onItemClick(listCity, holdel.adapterPosition)
+            onclickiItemListener.onItemClick(listCity.get(position))
         }
     }
 
