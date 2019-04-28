@@ -12,11 +12,13 @@
         android:text="@string/label_humidity" />
 
     <RadioGroup
+        android:id="@+id/rdGroupHumidity"
         android:layout_marginTop="@dimen/spacing_normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioButton
+            android:id="@+id/rdPercent"
             style="@style/TextContentLarge"
             android:paddingStart="@dimen/spacing_tiny"
             android:buttonTint="@color/blue"
@@ -24,6 +26,7 @@
             android:text="@string/label_radio_relative" />
 
         <RadioButton
+            android:id="@+id/rdAbsolute"
             style="@style/TextContentLarge"
             android:paddingStart="@dimen/spacing_tiny"
             android:buttonTint="@color/blue"

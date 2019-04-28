@@ -4,12 +4,20 @@ package com.example.weatheronline.dialog
 import android.graphics.Point
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
+import android.util.Log
 import android.view.*
+import android.widget.RadioButton
 
 import com.example.weatheronline.R
+import com.example.weatheronline.common.Common
+import com.example.weatheronline.ui.weather.MainActivity
+import com.example.weatheronline.ui.weather.SettingActivity
 import kotlinx.android.synthetic.main.fragment_dialog_setting_temperature.*
+import namhenry.com.vn.projectweek4.utills.SharePrefs
 
 class DialogSettingTemperatureFragment : DialogFragment() {
+
+    var index = 0
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -19,9 +27,31 @@ class DialogSettingTemperatureFragment : DialogFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        when (Common.stateDegree) {
+            Common.Type_Degree_C -> {
+                rdGroup.check(R.id.rbCdegree)
+            }
+            Common.Type_Degree_F -> {
+                rdGroup.check(R.id.rbFdegree)
+            }
+            Common.Type_Degree_K -> {
+                rdGroup.check(R.id.rbKdegree)
+            }
+        }
+
         tvLabelCancel.setOnClickListener {
+            Common.stateDegree = index
+            val radioButtonID = rdGroup.checkedRadioButtonId
+            val radioButton = rdGroup.findViewById<RadioButton>(radioButtonID)
+            index = rdGroup.indexOfChild(radioButton)
+            Common.stateDegree = index
+            SharePrefs().getInstance().put("KEY_TYPE_DEGREE_CUSTOM_SELECTED", index)
+            (activity as SettingActivity).upDateDegree()
+
             dismiss()
         }
+
+
     }
 
     override fun onResume() {

@@ -12,11 +12,13 @@
         android:text="Win Speed" />
 
     <RadioGroup
+        android:id="@+id/rdGroupWind"
         android:layout_marginTop="@dimen/spacing_normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioButton
+            android:id="@+id/rdWindKm"
             style="@style/TextContentLarge"
             android:paddingStart="@dimen/spacing_tiny"
             android:buttonTint="@color/blue"
@@ -24,6 +26,7 @@
             android:text="@string/label_radio_wind_km" />
 
         <RadioButton
+            android:id="@+id/rdWindMiles"
             style="@style/TextContentLarge"
             android:paddingStart="@dimen/spacing_tiny"
             android:buttonTint="@color/blue"

@@ -72,7 +72,7 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
             publishSubject.debounce(300, TimeUnit.MILLISECONDS)
                 .distinctUntilChanged()
                 .switchMapSingle {
-                    dataClient.getWeatherDatabyCity(Common.API_Key9, it)
+                    dataClient.getWeatherDatabyCity(Common.API_Key4, it)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                 }

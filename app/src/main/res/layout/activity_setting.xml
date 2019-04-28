@@ -24,6 +24,7 @@
             android:text="@string/label_temperature" />
 
         <TextView
+            android:id="@+id/tvgetDegreeC"
             style="@style/TextContentLarge"
             android:paddingTop="@dimen/spacing_tiny"
             android:text="@string/label_radio_c_degree" />
@@ -49,6 +50,7 @@
             android:text="@string/label_humidity" />
 
         <TextView
+            android:id="@+id/tvHumiditySetting"
             style="@style/TextContentLarge"
             android:paddingTop="@dimen/spacing_tiny"
             android:text="@string/label_radio_relative" />
@@ -74,6 +76,7 @@
             android:text="@string/label_windspeed" />
 
         <TextView
+            android:id="@+id/tvWindSpeedSetting"
             style="@style/TextContentLarge"
             android:paddingTop="@dimen/spacing_tiny"
             android:text="@string/label_radio_wind_km" />

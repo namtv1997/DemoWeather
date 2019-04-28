@@ -12,11 +12,13 @@
         android:text="@string/label_temperature" />
 
     <RadioGroup
+        android:id="@+id/rdGroup"
         android:layout_marginTop="@dimen/spacing_normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioButton
+            android:id="@+id/rbCdegree"
             style="@style/TextContentLarge"
             android:paddingStart="@dimen/spacing_tiny"
             android:buttonTint="@color/blue"
@@ -24,6 +26,7 @@
             android:text="@string/label_radio_c_degree" />
 
         <RadioButton
+            android:id="@+id/rbFdegree"
             style="@style/TextContentLarge"
             android:paddingStart="@dimen/spacing_tiny"
             android:buttonTint="@color/blue"
@@ -31,6 +34,7 @@
             android:text="@string/label_radio_f_degree" />
 
         <RadioButton
+            android:id="@+id/rbKdegree"
             style="@style/TextContentLarge"
             android:paddingStart="@dimen/spacing_tiny"
             android:buttonTint="@color/blue"
