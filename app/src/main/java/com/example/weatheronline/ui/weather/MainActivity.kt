@@ -42,8 +42,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.example.weatheronline.R.layout.activity_main)
-        db = DBHelper(this)
-        initAdapter()
+
 
         ivRefresh.setOnClickListener(this)
         tvLabelSetting.setOnClickListener(this)
@@ -81,7 +80,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
                     bg_weather_infor.setBackgroundColor(Color.parseColor("#d45e5e"))
                 }
 
-                val getDegree = SharePrefs().getInstance()["KEY_TYPE_DEGREE_CUSTOM_SELECTED", Int::class.java]
+                val getDegree = SharePrefs().getInstance()[Common.KEY_TYPE_DEGREE_CUSTOM_SELECTED, Int::class.java]
                 when (getDegree) {
                     Common.Type_Degree_C -> {
                         tvDegree.text = "${Math.round(it[0].temperature.metric.value!!)}º"
@@ -98,21 +97,21 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
 
                     }
                 }
-                val getHumidity = SharePrefs().getInstance()["KEY_TYPE_HUMIDITY_CUSTOM_SELECTED", Int::class.java]
+                val getHumidity = SharePrefs().getInstance()[Common.KEY_TYPE_HUMIDITY_CUSTOM_SELECTED, Int::class.java]
                 when (getHumidity) {
                     Common.Type_HUMIDITY_PERCENT -> {
-                        tvHumidity.text = "${it!![0].relativeHumidity.toString()}%"
+                        tvHumidity.text = "${it[0].relativeHumidity.toString()}%"
                     }
                     Common.Type_HUMIDITY_ABSOLUTE -> {
                         tvHumidity.text = "${Math.round(
                             calculateAbsoluteHumidity(
-                                it!![0].temperature.metric.value!!,
+                                it[0].temperature.metric.value!!,
                                 it[0].relativeHumidity!!
                             )
                         )}g/m3"
                     }
                 }
-                val getWind = SharePrefs().getInstance()["KEY_TYPE_WIND_CUSTOM_SELECTED", Int::class.java]
+                val getWind = SharePrefs().getInstance()[Common.KEY_TYPE_WIND_CUSTOM_SELECTED, Int::class.java]
                 when (getWind) {
                     Common.Type_WIND_KM -> {
                         tvWindSpeed.text = "${it[0].wind.speed.metric.value}km/h"
@@ -123,7 +122,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
 
                 }
 
-                val sdfCurrent = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX")
+                val sdfCurrent = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
                 val dateInStringCurrent = sdfCurrent.parse(it[0].localObservationDateTime)
                 sdfCurrent.applyPattern("yyyy EEEE MMMM-dd")
                 val splitString = " "
@@ -150,7 +149,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
             weather.observe(this@MainActivity, android.arch.lifecycle.Observer {
 
 
-                val getDegree = SharePrefs().getInstance()["KEY_TYPE_DEGREE_CUSTOM_SELECTED", Int::class.java]
+                val getDegree = SharePrefs().getInstance()[Common.KEY_TYPE_DEGREE_CUSTOM_SELECTED, Int::class.java]
 
                 when (getDegree) {
                     Common.Type_Degree_C -> {
@@ -243,24 +242,25 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
         super.onResume()
         innitViewModelCurrent()
         innitViewModel5days()
+        db = DBHelper(this)
         if (intent.extras != null) {
             data = intent.getParcelableExtra<CityResult>("dataCity")
-            mWeatherViewmodel.getDataWeatherCurrent(data!!.key!!, Common.API_Key4, true)
-            mWeatherViewmodel.getDataWeather5days(data!!.key!!, Common.API_Key4, true)
+            mWeatherViewmodel.getDataWeatherCurrent(data!!.key!!, Common.API_Key7, true)
+            mWeatherViewmodel.getDataWeather5days(data!!.key!!, Common.API_Key7, true)
             val citySql = CitySql(
                 data!!.key!!,
                 data!!.localizedName!!
             )
-            initAdapter()
             db.addCity(citySql)
             tvLabelLocation.text = data!!.localizedName
         }
+        initAdapter()
     }
 
     override fun onItemClickGetCity(city: CitySql) {
-        mWeatherViewmodel.getDataWeatherCurrent(city.key!!, Common.API_Key4, true)
-        mWeatherViewmodel.getDataWeather5days(city.key!!, Common.API_Key4, true)
-        tvLabelLocation.text = city!!.localizedName
+        mWeatherViewmodel.getDataWeatherCurrent(city.key!!, Common.API_Key7, true)
+        mWeatherViewmodel.getDataWeather5days(city.key!!, Common.API_Key7, true)
+        tvLabelLocation.text = city.localizedName
         drawerLayout.closeDrawers()
     }
 
@@ -277,7 +277,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
             }
             com.example.weatheronline.R.id.ivRefresh -> {
                 if (data?.key != null) {
-                    mWeatherViewmodel.getDataWeatherCurrent(data!!.key!!, Common.API_Key4, true)
+                    mWeatherViewmodel.getDataWeatherCurrent(data!!.key!!, Common.API_Key7, true)
                 }
 
             }

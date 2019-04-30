@@ -45,7 +45,7 @@ class DialogSettingTemperatureFragment : DialogFragment() {
             val radioButton = rdGroup.findViewById<RadioButton>(radioButtonID)
             index = rdGroup.indexOfChild(radioButton)
             Common.stateDegree = index
-            SharePrefs().getInstance().put("KEY_TYPE_DEGREE_CUSTOM_SELECTED", index)
+            SharePrefs().getInstance().put(Common.KEY_TYPE_DEGREE_CUSTOM_SELECTED, index)
             (activity as SettingActivity).upDateDegree()
 
             dismiss()

@@ -8,6 +8,7 @@
     <TextView
         android:id="@+id/tvItemCity"
         style="@style/TextContentNormal"
+        android:background="?attr/selectableItemBackground"
         android:layout_width="match_parent"
         android:layout_marginEnd="8dp"
         android:text="Hanoi "

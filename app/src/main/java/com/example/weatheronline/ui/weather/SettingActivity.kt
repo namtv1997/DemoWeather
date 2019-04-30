@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.example.weatheronline.R
 import com.example.weatheronline.base.BaseActivity
 import com.example.weatheronline.common.Common
+import com.example.weatheronline.dialog.DialogAboutAppFragment
 import com.example.weatheronline.dialog.DialogSettingHumidityFragment
 import com.example.weatheronline.dialog.DialogSettingTemperatureFragment
 import com.example.weatheronline.dialog.DialogSettingWinSpeedFragment
@@ -21,6 +22,7 @@ class SettingActivity : BaseActivity(), View.OnClickListener {
     private  var mDialogSettingHumidityFragment:DialogSettingHumidityFragment?= null
     private  var mDialogSettingTemperatureFragment:DialogSettingTemperatureFragment?= null
     private  var mDialogSettingWinSpeedFragment:DialogSettingWinSpeedFragment?= null
+    private  var mDialogAboutAppFragment:DialogAboutAppFragment?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +34,7 @@ class SettingActivity : BaseActivity(), View.OnClickListener {
         llHumidity.setOnClickListener(this)
         llTemperature.setOnClickListener(this)
         llWindSpeed.setOnClickListener(this)
+        tvLabelAbout.setOnClickListener(this)
         upDateDegree()
         upDateHumidity()
         upDateWind()
@@ -40,7 +43,7 @@ class SettingActivity : BaseActivity(), View.OnClickListener {
     }
 
     fun upDateDegree(){
-        val getDegree=SharePrefs().getInstance()["KEY_TYPE_DEGREE_CUSTOM_SELECTED",Int::class.java]
+        val getDegree=SharePrefs().getInstance()[Common.KEY_TYPE_DEGREE_CUSTOM_SELECTED,Int::class.java]
         when(getDegree){
             Common.Type_Degree_C->{
                 tvgetDegreeC.text=getString(R.string.label_radio_c_degree)
@@ -58,7 +61,7 @@ class SettingActivity : BaseActivity(), View.OnClickListener {
     }
 
     fun upDateHumidity(){
-        val getHumidity=SharePrefs().getInstance()["KEY_TYPE_HUMIDITY_CUSTOM_SELECTED",Int::class.java]
+        val getHumidity=SharePrefs().getInstance()[Common.KEY_TYPE_HUMIDITY_CUSTOM_SELECTED,Int::class.java]
         when(getHumidity){
             Common.Type_HUMIDITY_PERCENT->{
                 tvHumiditySetting.text=getString(R.string.label_radio_relative)
@@ -71,7 +74,7 @@ class SettingActivity : BaseActivity(), View.OnClickListener {
     }
 
     fun upDateWind(){
-        val getWind=SharePrefs().getInstance()["KEY_TYPE_WIND_CUSTOM_SELECTED",Int::class.java]
+        val getWind=SharePrefs().getInstance()[Common.KEY_TYPE_WIND_CUSTOM_SELECTED,Int::class.java]
         when(getWind){
             Common.Type_WIND_KM->{
                 tvWindSpeedSetting.text=getString(R.string.label_radio_wind_km)
@@ -96,6 +99,10 @@ class SettingActivity : BaseActivity(), View.OnClickListener {
             R.id.llWindSpeed->{
                 mDialogSettingWinSpeedFragment=DialogSettingWinSpeedFragment()
                 mDialogSettingWinSpeedFragment?.show(this.supportFragmentManager, "")
+            }
+            R.id.tvLabelAbout->{
+                mDialogAboutAppFragment=DialogAboutAppFragment()
+                mDialogAboutAppFragment?.show(this.supportFragmentManager, "")
             }
         }
 

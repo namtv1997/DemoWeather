@@ -40,7 +40,7 @@ class DialogSettingHumidityFragment : DialogFragment() {
             val radioButton = rdGroupHumidity.findViewById<RadioButton>(radioButtonID)
             index = rdGroupHumidity.indexOfChild(radioButton)
             Common.stateDegree = index
-            SharePrefs().getInstance().put("KEY_TYPE_HUMIDITY_CUSTOM_SELECTED", index)
+            SharePrefs().getInstance().put(Common.KEY_TYPE_HUMIDITY_CUSTOM_SELECTED, index)
             (activity as SettingActivity).upDateHumidity()
             dismiss()
         }

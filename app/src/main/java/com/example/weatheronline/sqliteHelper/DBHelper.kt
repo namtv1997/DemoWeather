@@ -10,7 +10,7 @@ import com.example.weatheronline.model.sqlite.CitySql
 class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VER){
     override fun onCreate(db: SQLiteDatabase?) {
         val CREATE_TABLE_QUERY =
-            ("CREATE TABLE $TABLE_NAME($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_KEY TEXT,$COL_LOCALIZEDNAME TEXT)")
+            ("CREATE TABLE $TABLE_NAME($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_KEY TEXT UNIQUE ,$COL_LOCALIZEDNAME TEXT)")
         db!!.execSQL(CREATE_TABLE_QUERY)
     }
 

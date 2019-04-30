@@ -36,7 +36,7 @@ class DialogSettingWinSpeedFragment : DialogFragment() {
             val radioButton = rdGroupWind.findViewById<RadioButton>(radioButtonID)
             index = rdGroupWind.indexOfChild(radioButton)
             Common.stateDegree = index
-            SharePrefs().getInstance().put("KEY_TYPE_WIND_CUSTOM_SELECTED", index)
+            SharePrefs().getInstance().put(Common.KEY_TYPE_WIND_CUSTOM_SELECTED, index)
             (activity as SettingActivity).upDateWind()
             dismiss()
         }

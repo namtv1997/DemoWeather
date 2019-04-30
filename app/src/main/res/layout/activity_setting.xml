@@ -14,6 +14,7 @@
         android:id="@+id/llTemperature"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
         android:orientation="vertical"
         android:padding="@dimen/spacing_small"
         app:layout_constraintTop_toBottomOf="@id/includetoolbarSetting">
@@ -40,6 +41,7 @@
         android:id="@+id/llHumidity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
         android:orientation="vertical"
         android:padding="@dimen/spacing_small"
         app:layout_constraintTop_toBottomOf="@id/llTemperature">
@@ -66,6 +68,7 @@
         android:id="@+id/llWindSpeed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
         android:orientation="vertical"
         android:padding="@dimen/spacing_small"
         app:layout_constraintTop_toBottomOf="@id/llHumidity">
@@ -91,6 +94,8 @@
     <TextView
         android:id="@+id/tvLabelAbout"
         style="@style/TextContentHuge"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
         android:layout_width="match_parent"
         android:paddingStart="@dimen/spacing_small"
         android:paddingTop="@dimen/spacing_large"
