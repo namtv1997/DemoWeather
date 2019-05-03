@@ -25,4 +25,6 @@ object Common {
   const val API_Key9:String ="BS3zmvLPGQ2PyTjOqONW7UfXJNJJ720n"
   const val API_Key10:String ="rUOGzHqVFYaEC9QkXw48o6IeiSGUGi8r"
   const val API_Key11:String ="3ZoO3gRBQVgGJjXCPWTdCFbQZ746GNtE"
+  const val API_Key12:String ="0Kw77wDCpvE2GkhPgd6ZG2XkhmwhN4md"
+  const val API_Key13:String ="Fc1Clk9yGGzwqbvnGiRbeHs7E8hXE8FF"
 }

@@ -1,7 +1,6 @@
 package com.example.weatheronline.ui.weather
 
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -51,11 +50,11 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
             override fun beforeTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (s!!.isNotEmpty()) {
+                if (s!!.length > 0) {
                     ivCancel.visibility = View.VISIBLE
                     imgEmpty.visibility = View.GONE
                     tvEmpty.visibility = View.GONE
-
+                    initObserver()
                 } else {
                     ivCancel.visibility = View.GONE
                     imgEmpty.visibility = View.VISIBLE
@@ -66,29 +65,6 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
             }
         })
 
-        val observer = getSearchObserver()
-
-        disposable.add(
-            publishSubject.debounce(300, TimeUnit.MILLISECONDS)
-                .distinctUntilChanged()
-                .switchMapSingle {
-                    dataClient.getWeatherDatabyCity(Common.API_Key7, it)
-                        .subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread())
-                }
-                .subscribeWith(observer)
-        )
-
-        disposable.add(
-            RxTextView.textChangeEvents(edtSearch!!)
-                .skipInitialValue()
-                .debounce(300, TimeUnit.MILLISECONDS)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(searchCityTextWatcher())
-        )
-
-        disposable.add(observer)
 
 
         ivCancel.setOnClickListener(this)
@@ -105,6 +81,29 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
                 edtSearch.setText("")
             }
         }
+    }
+
+
+    private fun initObserver(){
+        disposable.add(
+            publishSubject.debounce(300, TimeUnit.MILLISECONDS)
+                .distinctUntilChanged()
+                .switchMapSingle {
+                    dataClient.getWeatherDatabyCity(Common.API_Key6, it)
+                }
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(getSearchObserver())
+        )
+
+        disposable.add(
+            RxTextView.textChangeEvents(edtSearch!!)
+                .skipInitialValue()
+                .debounce(300, TimeUnit.MILLISECONDS)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(searchCityTextWatcher())
+        )
     }
 
     private fun searchCityTextWatcher(): DisposableObserver<TextViewTextChangeEvent> {

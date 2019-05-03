@@ -10,7 +10,6 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.weatheronline.R
 import com.example.weatheronline.adapter.IclickItemGetCity
@@ -22,7 +21,6 @@ import com.example.weatheronline.model.sqlite.CitySql
 import com.example.weatheronline.sqliteHelper.DBHelper
 import com.example.weatheronline.viewmodel.WeatherViewmodel
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_setting.*
 import namhenry.com.vn.projectweek4.utills.SharePrefs
 import java.text.SimpleDateFormat
 import java.util.*
@@ -35,14 +33,16 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
     private lateinit var db: DBHelper
 
     private var listCity: List<CitySql> = ArrayList()
+    private var citysql: CitySql? = null
     private var data: CityResult? = null
+    private var isSearchCity: Boolean = false
+    private var compareTime: Int? = null
 
     @SuppressLint("SetTextI18n", "SimpleDateFormat")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.example.weatheronline.R.layout.activity_main)
-
 
         ivRefresh.setOnClickListener(this)
         tvLabelSetting.setOnClickListener(this)
@@ -69,8 +69,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
         mWeatherViewmodel = ViewModelProviders.of(this).get(WeatherViewmodel::class.java).apply {
             weatherCurrent.observe(this@MainActivity, android.arch.lifecycle.Observer {
 
-
-                if (it!![0].relativeHumidity == 100) {
+                if (it!![0].weatherText == "Rain") {
 
                     bg_weather_infor.setBackgroundColor(Color.parseColor("#48aca2"))
                     ivSttWeather.setImageResource(R.drawable.ic_rain)
@@ -87,7 +86,6 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
                     }
                     Common.Type_Degree_F -> {
                         tvDegree.text = "${Math.round(it[0].temperature.imperial.value!!)}ºF"
-
 
                     }
                     Common.Type_Degree_K -> {
@@ -122,23 +120,25 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
 
                 }
 
-                val sdfCurrent = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
-                val dateInStringCurrent = sdfCurrent.parse(it[0].localObservationDateTime)
-                sdfCurrent.applyPattern("yyyy EEEE MMMM-dd")
+                val dateInStringCurrent = it[0].localObservationDateTime
+                val sdfCurrent = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+                val shortdateInStringCurrent = dateInStringCurrent?.substring(0, 19)
+                val date = sdfCurrent.parse(shortdateInStringCurrent)
+
+                val sdfCurrentDate = SimpleDateFormat("yyyy EEEE MMMM-dd")
+
                 val splitString = " "
-                val part = sdfCurrent.format(dateInStringCurrent).split(splitString)
+                val part = sdfCurrentDate.format(date).split(splitString)
                 tvLabelYear.text = part[0]
                 tvDay.text = part[1]
                 tvDate.text = part[2]
 
-                sdfCurrent.applyPattern("HH:mm:ss")
-                val splitString1 = ":"
-                val part1 = sdfCurrent.format(dateInStringCurrent).split(splitString1)
-                val compareTime = part1[0].toInt()
+                val sdfCurrentTime = SimpleDateFormat("HH:mm:ss")
+                val splitStringTime = ":"
+                val part1 = sdfCurrentTime.format(date).split(splitStringTime)
+                compareTime = part1[0].toInt()
 
-                if (compareTime > 19) {
-                    bg_weather_infor.setBackgroundColor(Color.parseColor("#343434"))
-                }
+
             })
         }
     }
@@ -190,19 +190,57 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
                     }
                 }
 
+                val dateInStringDay1 = it?.DailyForecasts!![1].date
+                val dateInStringDay2 = it.DailyForecasts[2].date
+                val dateInStringDay3 = it.DailyForecasts[3].date
+                val dateInStringDay4 = it.DailyForecasts[4].date
+                val timeSunset = it.DailyForecasts[0].sun.set
+                val timeSunrise = it.DailyForecasts[0].sun.rise
 
-                val sdf5days = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX")
-                val dateInStringDay1 = sdf5days.parse(it?.DailyForecasts!![1].date)
-                val dateInStringDay2 = sdf5days.parse(it.DailyForecasts[2].date)
-                val dateInStringDay3 = sdf5days.parse(it.DailyForecasts[3].date)
-                val dateInStringDay4 = sdf5days.parse(it.DailyForecasts[4].date)
+                val sdf5days = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+                val shortdateInStringDay1 = dateInStringDay1?.substring(0, 19)
+                val shortdateInStringDay2 = dateInStringDay2?.substring(0, 19)
+                val shortdateInStringDay3 = dateInStringDay3?.substring(0, 19)
+                val shortdateInStringDay4 = dateInStringDay4?.substring(0, 19)
+                val shorttimeSunset = timeSunset?.substring(0, 19)
+                val shorttimeSunrise = timeSunrise?.substring(0, 19)
+                val sunset = sdf5days.parse(shorttimeSunset)
+                val sunrise = sdf5days.parse(shorttimeSunrise)
 
-                sdf5days.applyPattern("EEE")
+                val sdf5days1 = SimpleDateFormat("EEE")
+                val day1 = sdf5days.parse(shortdateInStringDay1)
+                val day2 = sdf5days.parse(shortdateInStringDay2)
+                val day3 = sdf5days.parse(shortdateInStringDay3)
+                val day4 = sdf5days.parse(shortdateInStringDay4)
 
-                tvTueDay.text = sdf5days.format(dateInStringDay1)
-                tvWednesday.text = sdf5days.format(dateInStringDay2)
-                tvThurday.text = sdf5days.format(dateInStringDay3)
-                tvFriDay.text = sdf5days.format(dateInStringDay4)
+                val resultday1 = sdf5days1.format(day1)
+                val resultday2 = sdf5days1.format(day2)
+                val resultday3 = sdf5days1.format(day3)
+                val resultday4 = sdf5days1.format(day4)
+
+                tvTueDay.text = resultday1
+                tvWednesday.text = resultday2
+                tvThurday.text = resultday3
+                tvFriDay.text = resultday4
+
+                val sdf5days2 = SimpleDateFormat("HH:mm:ss")
+                val splitStringtimeSun = ":"
+                val parttimeSunset = sdf5days2.format(sunset).split(splitStringtimeSun)
+                val parttimeSunrise = sdf5days2.format(sunrise).split(splitStringtimeSun)
+
+                val compareTimeSunset = parttimeSunset[0].toInt()
+
+                val compareTimeSunrise = parttimeSunrise[0].toInt()
+
+                if (compareTime != null) {
+                    if (compareTime!! >= compareTimeSunset || compareTime!! < compareTimeSunrise) {
+
+                        bg_weather_infor.setBackgroundColor(Color.parseColor("#343434"))
+                    } else {
+                        bg_weather_infor.setBackgroundColor(Color.parseColor("#d45e5e"))
+                    }
+                }
+
             })
         }
     }
@@ -244,22 +282,26 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
         innitViewModel5days()
         db = DBHelper(this)
         if (intent.extras != null) {
-            data = intent.getParcelableExtra<CityResult>("dataCity")
-            mWeatherViewmodel.getDataWeatherCurrent(data!!.key!!, Common.API_Key7, true)
-            mWeatherViewmodel.getDataWeather5days(data!!.key!!, Common.API_Key7, true)
+            data = intent.getParcelableExtra("dataCity")
+            mWeatherViewmodel.getDataWeatherCurrent(data!!.key!!, Common.API_Key6, true)
+            mWeatherViewmodel.getDataWeather5days(data!!.key!!, Common.API_Key6, true)
+            isSearchCity = true
             val citySql = CitySql(
                 data!!.key!!,
                 data!!.localizedName!!
             )
             db.addCity(citySql)
             tvLabelLocation.text = data!!.localizedName
+
         }
         initAdapter()
+
     }
 
     override fun onItemClickGetCity(city: CitySql) {
-        mWeatherViewmodel.getDataWeatherCurrent(city.key!!, Common.API_Key7, true)
-        mWeatherViewmodel.getDataWeather5days(city.key!!, Common.API_Key7, true)
+        citysql = city
+        mWeatherViewmodel.getDataWeatherCurrent(city.key!!, Common.API_Key6, true)
+        mWeatherViewmodel.getDataWeather5days(city.key!!, Common.API_Key6, true)
         tvLabelLocation.text = city.localizedName
         drawerLayout.closeDrawers()
     }
@@ -276,9 +318,17 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
                 startActivity(intent)
             }
             com.example.weatheronline.R.id.ivRefresh -> {
-                if (data?.key != null) {
-                    mWeatherViewmodel.getDataWeatherCurrent(data!!.key!!, Common.API_Key7, true)
+                if (isSearchCity) {
+                    if (data?.key != null) {
+                        mWeatherViewmodel.getDataWeatherCurrent(data?.key!!, Common.API_Key6, true)
+                    }
+
+                } else {
+                    if (citysql?.key != null) {
+                        mWeatherViewmodel.getDataWeatherCurrent(citysql?.key!!, Common.API_Key6, true)
+                    }
                 }
+
 
             }
         }

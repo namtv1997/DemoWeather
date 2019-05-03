@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/viewpagerdotsindicator-3.0.3.aar/73c257b407ab849327c51b6a8cc01821/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/viewpagerdotsindicator-3.0.3.aar/73c257b407ab849327c51b6a8cc01821/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/viewpagerdotsindicator-3.0.3.aar/bd44dc27c2478f5d42e5942f43827017/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/viewpagerdotsindicator-3.0.3.aar/bd44dc27c2478f5d42e5942f43827017/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

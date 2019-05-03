@@ -29,7 +29,7 @@ class WeatherCurent:Serializable{
 
     @SerializedName("PrecipitationType")
     @Expose
-    val precipitationType: Objects? = null
+    val precipitationType: String? = null
 
     @SerializedName("IsDayTime")
     @Expose
