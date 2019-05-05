@@ -19,13 +19,14 @@ class SqliteCityAdapter(private var listCitySql: List<CitySql>, var onclickiItem
     override fun onBindViewHolder(hodel: ViewHolder, position: Int) {
         hodel.bind(listCitySql[position])
         hodel.itemView.setOnClickListener {
-            onclickiItemListener.onItemClickGetCity(listCitySql.get(position))
+            onclickiItemListener.onItemClickGetCity(listCitySql[position])
         }
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(citySql: CitySql) = with(itemView) {
             tvItemGetCity.text = citySql.localizedName
+            tvItemGetCountry.text=citySql.localizedNameCountry
         }
 
     }

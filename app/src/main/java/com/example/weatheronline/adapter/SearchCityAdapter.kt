@@ -33,6 +33,7 @@ class SearchCityAdapter(private var listCity: ArrayList<CityResult>, var onclick
 
         fun bind(listCity: CityResult) = with(itemView) {
             tvItemCity.text = listCity.localizedName
+            tvItemCountry.text=listCity.country.localizedName
         }
 
     }

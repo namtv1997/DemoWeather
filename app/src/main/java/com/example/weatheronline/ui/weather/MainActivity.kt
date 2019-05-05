@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.weatheronline.R
 import com.example.weatheronline.adapter.IclickItemGetCity
@@ -37,6 +38,9 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
     private var data: CityResult? = null
     private var isSearchCity: Boolean = false
     private var compareTime: Int? = null
+    private var statusRain: String? = null
+    private var statusRain1: String? = null
+    private var statusRain2: String? = null
 
     @SuppressLint("SetTextI18n", "SimpleDateFormat")
     @RequiresApi(Build.VERSION_CODES.O)
@@ -69,14 +73,12 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
         mWeatherViewmodel = ViewModelProviders.of(this).get(WeatherViewmodel::class.java).apply {
             weatherCurrent.observe(this@MainActivity, android.arch.lifecycle.Observer {
 
-                if (it!![0].weatherText == "Rain") {
-
+                if (it!![0].weatherText == "Rain" || it[0].weatherText == "Light rain"|| it[0].weatherText == "A shower") {
+                    statusRain = "${it[0].weatherText == "Rain"}"
+                    statusRain1 = "${it[0].weatherText == "Light rain"}"
+                    statusRain2 = "${it[0].weatherText == "Shower"}"
                     bg_weather_infor.setBackgroundColor(Color.parseColor("#48aca2"))
-                    ivSttWeather.setImageResource(R.drawable.ic_rain)
-
-                } else {
                     ivSttWeather.setImageResource(R.drawable.ic_sun)
-                    bg_weather_infor.setBackgroundColor(Color.parseColor("#d45e5e"))
                 }
 
                 val getDegree = SharePrefs().getInstance()[Common.KEY_TYPE_DEGREE_CUSTOM_SELECTED, Int::class.java]
@@ -137,6 +139,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
                 val splitStringTime = ":"
                 val part1 = sdfCurrentTime.format(date).split(splitStringTime)
                 compareTime = part1[0].toInt()
+
 
 
             })
@@ -230,14 +233,26 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
 
                 val compareTimeSunset = parttimeSunset[0].toInt()
 
+
                 val compareTimeSunrise = parttimeSunrise[0].toInt()
 
                 if (compareTime != null) {
                     if (compareTime!! >= compareTimeSunset || compareTime!! < compareTimeSunrise) {
+                        Log.d("tag", "compareTimeSunset${compareTimeSunset}")
+                        Log.d("tag", "compareTimeSunrise${compareTimeSunrise}")
+                        Log.d("tag", "comparetime${compareTime}")
+                        Log.d("tag", "chay vao if")
+                        if (statusRain != "Rain" && statusRain1 != "Light rain"&& statusRain2 != "A shower"){
+                            bg_weather_infor.setBackgroundColor(Color.parseColor("#343434"))
+                            Log.d("tag", "den")
+                        }
 
-                        bg_weather_infor.setBackgroundColor(Color.parseColor("#343434"))
                     } else {
-                        bg_weather_infor.setBackgroundColor(Color.parseColor("#d45e5e"))
+                        if (statusRain != "Rain" && statusRain1 != "Light rain"&& statusRain2 != "A shower"){
+                            bg_weather_infor.setBackgroundColor(Color.parseColor("#d45e5e"))
+                            Log.d("tag", "do")
+                        }
+
                     }
                 }
 
@@ -259,7 +274,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
  A: Pressure constant in hP
  K: Temperature constant for converting to kelvin
  */
-    fun calculateAbsoluteHumidity(temperature: Double, relativeHumidity: Int): Float {
+    private fun calculateAbsoluteHumidity(temperature: Double, relativeHumidity: Int): Float {
         var Dv = 0f
         val m = 17.62f
         val Tn = 243.12f
@@ -283,12 +298,13 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
         db = DBHelper(this)
         if (intent.extras != null) {
             data = intent.getParcelableExtra("dataCity")
-            mWeatherViewmodel.getDataWeatherCurrent(data!!.key!!, Common.API_Key6, true)
-            mWeatherViewmodel.getDataWeather5days(data!!.key!!, Common.API_Key6, true)
-            isSearchCity = true
+            mWeatherViewmodel.getDataWeatherCurrent(data!!.key!!, Key, true)
+            mWeatherViewmodel.getDataWeather5days(data!!.key!!, Key, true)
+            isSearchCity =true
             val citySql = CitySql(
                 data!!.key!!,
-                data!!.localizedName!!
+                data!!.localizedName!!,
+                data!!.country.localizedName!!
             )
             db.addCity(citySql)
             tvLabelLocation.text = data!!.localizedName
@@ -299,9 +315,10 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
     }
 
     override fun onItemClickGetCity(city: CitySql) {
+        isSearchCity=false
         citysql = city
-        mWeatherViewmodel.getDataWeatherCurrent(city.key!!, Common.API_Key6, true)
-        mWeatherViewmodel.getDataWeather5days(city.key!!, Common.API_Key6, true)
+        mWeatherViewmodel.getDataWeatherCurrent(city.key!!, Key, true)
+        mWeatherViewmodel.getDataWeather5days(city.key!!, Key, true)
         tvLabelLocation.text = city.localizedName
         drawerLayout.closeDrawers()
     }
@@ -320,16 +337,18 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
             com.example.weatheronline.R.id.ivRefresh -> {
                 if (isSearchCity) {
                     if (data?.key != null) {
-                        mWeatherViewmodel.getDataWeatherCurrent(data?.key!!, Common.API_Key6, true)
+                        mWeatherViewmodel.getDataWeatherCurrent(data?.key!!, Key, true)
+                        mWeatherViewmodel.getDataWeather5days(data!!.key!!, Key, true)
+                        Toast.makeText(this, "Refresh Weather success search", Toast.LENGTH_SHORT).show()
                     }
 
                 } else {
                     if (citysql?.key != null) {
-                        mWeatherViewmodel.getDataWeatherCurrent(citysql?.key!!, Common.API_Key6, true)
+                        mWeatherViewmodel.getDataWeatherCurrent(citysql?.key!!, Key, true)
+                        mWeatherViewmodel.getDataWeather5days(citysql?.key!!, Key, true)
+                        Toast.makeText(this, "Refresh Weather success sql", Toast.LENGTH_SHORT).show()
                     }
                 }
-
-
             }
         }
     }

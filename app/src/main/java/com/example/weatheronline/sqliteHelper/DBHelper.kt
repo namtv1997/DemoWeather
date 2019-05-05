@@ -10,7 +10,7 @@ import com.example.weatheronline.model.sqlite.CitySql
 class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VER){
     override fun onCreate(db: SQLiteDatabase?) {
         val CREATE_TABLE_QUERY =
-            ("CREATE TABLE $TABLE_NAME($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_KEY TEXT UNIQUE ,$COL_LOCALIZEDNAME TEXT)")
+            ("CREATE TABLE $TABLE_NAME($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_KEY TEXT UNIQUE ,$COL_LOCALIZEDNAME TEXT,$COL_LOCALIZEDNAME_COUNTRY TEXT)")
         db!!.execSQL(CREATE_TABLE_QUERY)
     }
 
@@ -31,6 +31,7 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null,
                     person.id= cursor.getInt(cursor.getColumnIndex(COL_ID))
                     person.key= cursor.getString(cursor.getColumnIndex(COL_KEY))
                     person.localizedName= cursor.getString(cursor.getColumnIndex(COL_LOCALIZEDNAME))
+                    person.localizedNameCountry= cursor.getString(cursor.getColumnIndex(COL_LOCALIZEDNAME_COUNTRY))
 
                     lstPersons.add(person)
                 }while(cursor.moveToNext())
@@ -43,6 +44,7 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null,
         val values= ContentValues()
         values.put(COL_KEY,citySql.key)
         values.put(COL_LOCALIZEDNAME,citySql.localizedName)
+        values.put(COL_LOCALIZEDNAME_COUNTRY,citySql.localizedNameCountry)
         db.insert(TABLE_NAME,null,values)
         db.close()
     }
@@ -55,5 +57,6 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null,
         private val COL_ID = "Id"
         private val COL_KEY = "key"
         private val COL_LOCALIZEDNAME = "localizedName"
+        private val COL_LOCALIZEDNAME_COUNTRY = "localizedNameCountry"
     }
 }

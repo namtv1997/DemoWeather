@@ -9,11 +9,9 @@ import android.text.TextWatcher
 import android.view.View
 import com.example.mockproject.retrofit2.DataClient
 import com.example.mockproject.retrofit2.RetrofitClient
-import com.example.weatheronline.R
 import com.example.weatheronline.adapter.IClickItemListener
 import com.example.weatheronline.adapter.SearchCityAdapter
 import com.example.weatheronline.base.BaseActivity
-import com.example.weatheronline.common.Common
 import com.example.weatheronline.model.cityresult.CityResult
 import com.jakewharton.rxbinding2.widget.RxTextView
 import com.jakewharton.rxbinding2.widget.TextViewTextChangeEvent
@@ -24,6 +22,9 @@ import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.activity_search_city.*
 import java.util.concurrent.TimeUnit
+import android.view.inputmethod.EditorInfo
+import android.widget.TextView
+import android.view.KeyEvent
 
 
 class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListener {
@@ -50,7 +51,7 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
             override fun beforeTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (s!!.length > 0) {
+                if (s!!.isNotEmpty()) {
                     ivCancel.visibility = View.VISIBLE
                     imgEmpty.visibility = View.GONE
                     tvEmpty.visibility = View.GONE
@@ -65,19 +66,34 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
             }
         })
 
-
-
         ivCancel.setOnClickListener(this)
         ivBack.setOnClickListener(this)
 
+        edtSearch.setOnEditorActionListener(object : TextView.OnEditorActionListener {
+            override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
+                if (actionId==EditorInfo.IME_ACTION_SEARCH){
+                    if (listNameCity.size==1){
+                        val intent = Intent(this@SearchCityActivity, MainActivity::class.java)
+                        val bundle = Bundle()
+                        bundle.putParcelable("dataCity", listNameCity[0])
+                        intent.putExtras(bundle)
+                        startActivity(intent)
+                    }
+                }
+                return false
+            }
+        })
+
     }
+
+
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.ivBack -> {
+            com.example.weatheronline.R.id.ivBack -> {
                 finish()
             }
-            R.id.ivCancel -> {
+            com.example.weatheronline.R.id.ivCancel -> {
                 edtSearch.setText("")
             }
         }
@@ -89,7 +105,7 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
             publishSubject.debounce(300, TimeUnit.MILLISECONDS)
                 .distinctUntilChanged()
                 .switchMapSingle {
-                    dataClient.getWeatherDatabyCity(Common.API_Key6, it)
+                    dataClient.getWeatherDatabyCity(Key, it)
                 }
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

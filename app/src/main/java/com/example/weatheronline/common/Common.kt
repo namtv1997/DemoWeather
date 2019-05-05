@@ -27,4 +27,12 @@ object Common {
   const val API_Key11:String ="3ZoO3gRBQVgGJjXCPWTdCFbQZ746GNtE"
   const val API_Key12:String ="0Kw77wDCpvE2GkhPgd6ZG2XkhmwhN4md"
   const val API_Key13:String ="Fc1Clk9yGGzwqbvnGiRbeHs7E8hXE8FF"
+  const val API_Key14:String ="B7qyEGHU9bWmGPOKKy5DuCAi0ndMlhcc"
+  const val API_Key15:String ="My9KEfGPTI2ShIyrzRAoWLUum4Uz4K7w"
+  const val API_Key16:String ="CSNmaE7A4wvzjiG3gkUmJg7YtuZNp8HS"
+  const val API_Key17:String ="tefIbnvi5t45hVjHDvlHCxJJ5GCMdjc1"
+  const val API_Key18:String ="57GAkJKZmmsWLvD3ARSITBqes987JdSE"
+  const val API_Key19:String ="Jv90yxeRPYAMvSiMuWAocvmTxJnDkJWw"
+  const val API_Key20:String ="srFGLkGA446Sr1Qvf2KL94gCD9kbUp1Y"
+  const val API_Key21:String ="XpnYSVLeoGwZsX7AH3IpcN6vApWCSuDw"
 }
