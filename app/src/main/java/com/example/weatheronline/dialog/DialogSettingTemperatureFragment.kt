@@ -7,6 +7,7 @@ import android.support.v4.app.DialogFragment
 import android.util.Log
 import android.view.*
 import android.widget.RadioButton
+import android.widget.RadioGroup
 
 import com.example.weatheronline.R
 import com.example.weatheronline.common.Common
@@ -39,7 +40,7 @@ class DialogSettingTemperatureFragment : DialogFragment() {
             }
         }
 
-        tvLabelCancel.setOnClickListener {
+        rdGroup.setOnCheckedChangeListener { group, checkedId ->
             Common.stateDegree = index
             val radioButtonID = rdGroup.checkedRadioButtonId
             val radioButton = rdGroup.findViewById<RadioButton>(radioButtonID)
@@ -47,6 +48,10 @@ class DialogSettingTemperatureFragment : DialogFragment() {
             Common.stateDegree = index
             SharePrefs().getInstance().put(Common.KEY_TYPE_DEGREE_CUSTOM_SELECTED, index)
             (activity as SettingActivity).upDateDegree()
+
+        }
+
+        tvLabelCancel.setOnClickListener {
 
             dismiss()
         }

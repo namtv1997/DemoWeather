@@ -21,6 +21,8 @@
     <string name="error_message_lost_internet_connection">Unable to connect. Please check that you are connected to the
         Internet and try again.
     </string>
+    
+    <string name="alert_refresh_success">Refresh Weather success </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -30,7 +30,8 @@ class DialogSettingWinSpeedFragment : DialogFragment() {
             }
 
         }
-        tvLabelCancel.setOnClickListener {
+
+        rdGroupWind.setOnCheckedChangeListener { group, checkedId ->
             Common.stateDegree = index
             val radioButtonID = rdGroupWind.checkedRadioButtonId
             val radioButton = rdGroupWind.findViewById<RadioButton>(radioButtonID)
@@ -38,6 +39,9 @@ class DialogSettingWinSpeedFragment : DialogFragment() {
             Common.stateDegree = index
             SharePrefs().getInstance().put(Common.KEY_TYPE_WIND_CUSTOM_SELECTED, index)
             (activity as SettingActivity).upDateWind()
+        }
+
+        tvLabelCancel.setOnClickListener {
             dismiss()
         }
     }

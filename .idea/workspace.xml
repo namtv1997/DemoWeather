@@ -4,14 +4,18 @@
     <shared>
       <config>
         <device id="Nexus 5X" />
-        <device id="pixel_2_xl" />
+        <device id="Nexus 7" />
+        <device id="pixel_3_xl" />
+        <device id="pixel" />
         <device id="Nexus 9" />
+        <device id="tv_720p" />
+        <device id="tv_1080p" />
+        <device id="pixel_2_xl" />
         <device id="pixel_c" />
       </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="tag" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
@@ -147,7 +151,12 @@
     <last-search-timestamp>1556005092060</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2cc8aa-0023-4f74-83ec-0e95fd46e918" name="Default Changelist" comment="- COMMIT APP">
+    <list default="true" id="1f2cc8aa-0023-4f74-83ec-0e95fd46e918" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw360dp/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw480dp/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw640dp/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw720dp/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw800dp/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -158,69 +167,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_framework_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_db_framework_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_room_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_persistence_room_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_work_work_runtime_1_0_0_beta02_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_work_work_runtime_1_0_0_beta02_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_work_work_runtime_ktx_1_0_0_beta02_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_work_work_runtime_ktx_1_0_0_beta02_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_dynamic_animation_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_dynamic_animation_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_drawee_1_11_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_drawee_1_11_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_fbcore_1_11_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_fbcore_1_11_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_fresco_1_11_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_fresco_1_11_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_imagepipeline_1_11_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_imagepipeline_1_11_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_imagepipeline_base_1_11_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_imagepipeline_base_1_11_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_nativeimagefilters_1_11_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_nativeimagefilters_1_11_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_soloader_soloader_0_5_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_soloader_soloader_0_5_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_mancj_MaterialSearchBar_0_8_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_mancj_MaterialSearchBar_0_8_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_rxbinding2_rxbinding_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_rxbinding2_rxbinding_2_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_tbuonomo_andrui_viewpagerdotsindicator_3_0_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_tbuonomo_andrui_viewpagerdotsindicator_3_0_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxandroid_2_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxandroid_2_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__me_relex_circleindicator_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__me_relex_circleindicator_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/adapter/SqliteCityAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/adapter/SqliteCityAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/base/BaseActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/base/BaseActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingHumidityFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingHumidityFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingTemperatureFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingTemperatureFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingWinSpeedFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingWinSpeedFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/sqlite/CitySql.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/sqlite/CitySql.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/sqliteHelper/DBHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/sqliteHelper/DBHelper.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_get_city.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_get_city.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -253,28 +212,138 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/MainActivity.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw640dp/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+            <state relative-caret-position="17">
+              <caret line="318" column="41" selection-start-line="318" selection-start-column="41" selection-end-line="318" selection-end-column="41" />
               <folding>
-                <element signature="e#3664#3782#0" />
-                <element signature="e#3827#4046#0" />
-                <element signature="e#4274#4379#0" />
-                <element signature="e#4433#4753#0" />
-                <element signature="e#6585#7273#0" />
-                <element signature="e#7318#7850#0" />
-                <element signature="e#7895#8583#0" />
+                <element signature="e#39#13038#0" />
+                <element signature="e#807#830#0" expanded="true" />
+                <element signature="e#868#891#0" expanded="true" />
+                <element signature="e#1293#1315#0" expanded="true" />
+                <element signature="e#1742#1763#0" expanded="true" />
+                <element signature="e#1795#1818#0" expanded="true" />
+                <element signature="e#1927#1946#0" expanded="true" />
+                <element signature="e#2240#2261#0" expanded="true" />
+                <element signature="e#2372#2391#0" expanded="true" />
+                <element signature="e#2744#2766#0" expanded="true" />
+                <element signature="e#2804#2827#0" expanded="true" />
+                <element signature="e#3209#3230#0" expanded="true" />
+                <element signature="e#3704#3726#0" expanded="true" />
+                <element signature="e#4094#4117#0" expanded="true" />
+                <element signature="e#4151#4173#0" expanded="true" />
+                <element signature="e#4591#4614#0" expanded="true" />
+                <element signature="e#4646#4669#0" expanded="true" />
+                <element signature="e#4778#4797#0" expanded="true" />
+                <element signature="e#5107#5130#0" expanded="true" />
+                <element signature="e#5236#5255#0" expanded="true" />
+                <element signature="e#5568#5589#0" expanded="true" />
+                <element signature="e#5621#5642#0" expanded="true" />
+                <element signature="e#5748#5766#0" expanded="true" />
+                <element signature="e#6068#6089#0" expanded="true" />
+                <element signature="e#6396#6417#0" expanded="true" />
+                <element signature="e#6523#6541#0" expanded="true" />
+                <element signature="e#6814#6835#0" expanded="true" />
+                <element signature="e#6867#6888#0" expanded="true" />
+                <element signature="e#6994#7012#0" expanded="true" />
+                <element signature="e#7319#7340#0" expanded="true" />
+                <element signature="e#7653#7674#0" expanded="true" />
+                <element signature="e#7780#7798#0" expanded="true" />
+                <element signature="e#8072#8093#0" expanded="true" />
+                <element signature="e#8125#8146#0" expanded="true" />
+                <element signature="e#8252#8270#0" expanded="true" />
+                <element signature="e#8580#8601#0" expanded="true" />
+                <element signature="e#8910#8931#0" expanded="true" />
+                <element signature="e#9037#9055#0" expanded="true" />
+                <element signature="e#9326#9347#0" expanded="true" />
+                <element signature="e#9379#9400#0" expanded="true" />
+                <element signature="e#9506#9524#0" expanded="true" />
+                <element signature="e#9832#9853#0" expanded="true" />
+                <element signature="e#10160#10181#0" expanded="true" />
+                <element signature="e#10287#10305#0" expanded="true" />
+                <element signature="e#10731#10754#0" expanded="true" />
+                <element signature="e#11197#11226#0" expanded="true" />
+                <element signature="e#11260#11279#0" expanded="true" />
+                <element signature="e#11659#11680#0" expanded="true" />
+                <element signature="e#12226#12247#0" expanded="true" />
+                <element signature="e#12654#12676#0" expanded="true" />
+                <element signature="e#12702#12725#0" expanded="true" />
+                <element signature="e#12800#12819#0" expanded="true" />
               </folding>
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw800dp/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="85" lean-forward="true" selection-start-line="1" selection-start-column="85" selection-end-line="1" selection-end-column="85" />
+              <folding>
+                <element signature="e#39#13038#0" />
+                <element signature="e#807#830#0" expanded="true" />
+                <element signature="e#868#891#0" expanded="true" />
+                <element signature="e#1293#1315#0" expanded="true" />
+                <element signature="e#1742#1763#0" expanded="true" />
+                <element signature="e#1795#1818#0" expanded="true" />
+                <element signature="e#1927#1946#0" expanded="true" />
+                <element signature="e#2240#2261#0" expanded="true" />
+                <element signature="e#2372#2391#0" expanded="true" />
+                <element signature="e#2744#2766#0" expanded="true" />
+                <element signature="e#2804#2827#0" expanded="true" />
+                <element signature="e#3209#3230#0" expanded="true" />
+                <element signature="e#3704#3726#0" expanded="true" />
+                <element signature="e#4094#4117#0" expanded="true" />
+                <element signature="e#4151#4173#0" expanded="true" />
+                <element signature="e#4591#4614#0" expanded="true" />
+                <element signature="e#4646#4669#0" expanded="true" />
+                <element signature="e#4778#4797#0" expanded="true" />
+                <element signature="e#5107#5130#0" expanded="true" />
+                <element signature="e#5236#5255#0" expanded="true" />
+                <element signature="e#5568#5589#0" expanded="true" />
+                <element signature="e#5621#5642#0" expanded="true" />
+                <element signature="e#5748#5766#0" expanded="true" />
+                <element signature="e#6068#6089#0" expanded="true" />
+                <element signature="e#6396#6417#0" expanded="true" />
+                <element signature="e#6523#6541#0" expanded="true" />
+                <element signature="e#6814#6835#0" expanded="true" />
+                <element signature="e#6867#6888#0" expanded="true" />
+                <element signature="e#6994#7012#0" expanded="true" />
+                <element signature="e#7319#7340#0" expanded="true" />
+                <element signature="e#7653#7674#0" expanded="true" />
+                <element signature="e#7780#7798#0" expanded="true" />
+                <element signature="e#8072#8093#0" expanded="true" />
+                <element signature="e#8125#8146#0" expanded="true" />
+                <element signature="e#8252#8270#0" expanded="true" />
+                <element signature="e#8580#8601#0" expanded="true" />
+                <element signature="e#8910#8931#0" expanded="true" />
+                <element signature="e#9037#9055#0" expanded="true" />
+                <element signature="e#9326#9347#0" expanded="true" />
+                <element signature="e#9379#9400#0" expanded="true" />
+                <element signature="e#9506#9524#0" expanded="true" />
+                <element signature="e#9832#9853#0" expanded="true" />
+                <element signature="e#10160#10181#0" expanded="true" />
+                <element signature="e#10287#10305#0" expanded="true" />
+                <element signature="e#10731#10754#0" expanded="true" />
+                <element signature="e#11197#11226#0" expanded="true" />
+                <element signature="e#11260#11279#0" expanded="true" />
+                <element signature="e#11659#11680#0" expanded="true" />
+                <element signature="e#12226#12247#0" expanded="true" />
+                <element signature="e#12654#12676#0" expanded="true" />
+                <element signature="e#12702#12725#0" expanded="true" />
+                <element signature="e#12800#12819#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/base/BaseActivity.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="47">
+              <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -285,10 +354,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin Interface" />
         <option value="resourceFile" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -315,12 +384,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weathercurentday/RealFeelTemperatureCurrent.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weathercurentday/RealFeelTemperatureShadeCurrent.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weathercurentday/Visibility.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weathercurentday/WetBulbTemperature.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weathercurentday/WindChillTemperature.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weathercurentday/SpeedCurrent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weathercurentday/WindGustCurrent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weatherresult/WindGust.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weatherresult/Wind.kt" />
@@ -343,45 +406,83 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_setting_win_speed.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingHumidityFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingTemperatureFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingWinSpeedFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_about_app.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogAboutAppFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/SettingActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weathercurentday/WeatherCurrent1.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weathercurentday/WeatherCurent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/viewmodel/WeatherViewmodel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/adapter/SearchCityAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_search_city.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_get_city.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/sqlite/CitySql.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/adapter/SqliteCityAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/sqliteHelper/DBHelper.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_search_city.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/SearchCityActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/common/Common.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_get_city.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/adapter/SqliteCityAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/sqlite/CitySql.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/base/BaseActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/sqliteHelper/DBHelper.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingTemperatureFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingWinSpeedFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingHumidityFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-sw720dp/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-sw360dp/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-sw480dp/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-sw640dp/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-sw800dp/activity_main.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="-7" />
+    <option name="width" value="814" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DemoWeather" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="DemoWeather" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="DemoWeather" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="DemoWeather" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DEBUGGABLE_DEVICE" value="emulator-5554" />
@@ -394,7 +495,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="Pixel_3_XL_API_28" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WeatherOnline_Example" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../android-auto-generate-dimension" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="project.structure.last.edited" value="Build Variants" />
     <property name="project.structure.proportion" value="0.17" />
@@ -544,7 +645,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556017589180</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="FIXBUG TURN 4">
+      <created>1557107372084</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1557107372084</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -559,7 +667,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4993046" visible="true" weight="0.1600257" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4993046" visible="true" weight="0.23264782" />
       <window_info id="Resources Explorer" order="1" weight="0.32969153" />
       <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
       <window_info id="Structure" order="3" sideWeight="0.5006954" side_tool="true" weight="0.18380463" />
@@ -568,7 +676,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info id="Designer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.49932885" weight="0.4763889" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.49932885" weight="0.73333335" />
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49932885" weight="0.51111114" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32777777" />
@@ -581,7 +689,7 @@
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Preview" order="3" weight="0.34496644" />
+      <window_info anchor="right" id="Preview" order="3" weight="0.344473" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Gradle" order="5" weight="0.32969153" />
       <window_info anchor="right" id="Assistant" order="6" weight="0.32969153" />
@@ -618,7 +726,8 @@
     <MESSAGE value="add weather turn 2" />
     <MESSAGE value="Make ui app weather demo done" />
     <MESSAGE value="- COMMIT APP" />
-    <option name="LAST_COMMIT_MESSAGE" value="- COMMIT APP" />
+    <MESSAGE value="FIXBUG TURN 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIXBUG TURN 4" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -628,45 +737,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/WeatherFragment.kt" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/cityresult/Country.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/utills/Extension.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="e#46#352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/utills/SharePrefs.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="e#45#168#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_rain.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_sun.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_rain.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/shape_text_color_register_child.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_text_color.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -690,30 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_setting_humidity.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_setting_temperature.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_setting_win_speed.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/weatherresult/SpeedDouble.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -731,22 +777,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingHumidityFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="42" column="83" selection-start-line="42" selection-start-column="83" selection-end-line="42" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_about_app.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
@@ -758,6 +789,7 @@
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogAboutAppFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -769,34 +801,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingTemperatureFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingWinSpeedFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="38" column="79" selection-start-line="38" selection-start-column="79" selection-end-line="38" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/SettingActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
-        </state>
-      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -848,53 +859,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="68" column="44" lean-forward="true" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-          <folding>
-            <element signature="e#6994#7012#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/sqliteHelper/DBHelper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="12" column="153" selection-start-line="12" selection-start-column="153" selection-end-line="12" selection-end-column="153" />
-          <folding>
-            <element signature="e#48#302#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/sqlite/CitySql.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/adapter/SqliteCityAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_get_city.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -906,12 +874,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_city.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/adapter/SearchCityAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -928,12 +896,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_search_city.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-344">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/livedata-core/1.1.1/c38818e006ea7a408c05e3090364332d46494ef/livedata-core-1.1.1-sources.jar!/android/arch/lifecycle/MutableLiveData.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -980,33 +948,506 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/common/Common.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        <state relative-caret-position="408">
+          <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/MainActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/common/Common.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk">
+      <provider selected="true" editor-type-id="apk-viewer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_get_city.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding>
-            <element signature="e#3664#3782#0" />
-            <element signature="e#3827#4046#0" />
-            <element signature="e#4274#4379#0" />
-            <element signature="e#4433#4753#0" />
-            <element signature="e#6585#7273#0" />
-            <element signature="e#7318#7850#0" />
-            <element signature="e#7895#8583#0" />
+            <element signature="e#547#570#0" expanded="true" />
+            <element signature="e#626#645#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/model/sqlite/CitySql.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/sqliteHelper/DBHelper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="12" column="126" selection-start-line="12" selection-start-column="126" selection-end-line="12" selection-end-column="126" />
+          <folding>
+            <element signature="e#48#302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/adapter/SqliteCityAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/base/BaseActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="102">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_setting_temperature.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/SettingActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_setting_win_speed.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingHumidityFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingWinSpeedFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/dialog/DialogSettingTemperatureFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_setting_humidity.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/weatheronline/ui/weather/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-726">
+          <caret line="254" column="38" lean-forward="true" selection-start-line="254" selection-start-column="38" selection-end-line="254" selection-end-column="38" />
+          <folding>
+            <element signature="e#5801#10811#0" />
+            <element signature="e#10882#10940#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw720dp/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#447#10486#0" />
+            <element signature="e#807#830#0" expanded="true" />
+            <element signature="e#868#891#0" expanded="true" />
+            <element signature="e#1293#1315#0" expanded="true" />
+            <element signature="e#1742#1763#0" expanded="true" />
+            <element signature="e#1795#1818#0" expanded="true" />
+            <element signature="e#1927#1946#0" expanded="true" />
+            <element signature="e#2240#2261#0" expanded="true" />
+            <element signature="e#2372#2391#0" expanded="true" />
+            <element signature="e#2744#2766#0" expanded="true" />
+            <element signature="e#2804#2827#0" expanded="true" />
+            <element signature="e#3172#3193#0" expanded="true" />
+            <element signature="e#3704#3726#0" expanded="true" />
+            <element signature="e#4094#4117#0" expanded="true" />
+            <element signature="e#4151#4173#0" expanded="true" />
+            <element signature="e#4591#4614#0" expanded="true" />
+            <element signature="e#4646#4669#0" expanded="true" />
+            <element signature="e#4778#4797#0" expanded="true" />
+            <element signature="e#5107#5130#0" expanded="true" />
+            <element signature="e#5236#5255#0" expanded="true" />
+            <element signature="e#5568#5589#0" expanded="true" />
+            <element signature="e#5621#5642#0" expanded="true" />
+            <element signature="e#5748#5766#0" expanded="true" />
+            <element signature="e#6068#6089#0" expanded="true" />
+            <element signature="e#6396#6417#0" expanded="true" />
+            <element signature="e#6523#6541#0" expanded="true" />
+            <element signature="e#6814#6835#0" expanded="true" />
+            <element signature="e#6867#6888#0" expanded="true" />
+            <element signature="e#6994#7012#0" expanded="true" />
+            <element signature="e#7319#7340#0" expanded="true" />
+            <element signature="e#7653#7674#0" expanded="true" />
+            <element signature="e#7780#7798#0" expanded="true" />
+            <element signature="e#8072#8093#0" expanded="true" />
+            <element signature="e#8125#8146#0" expanded="true" />
+            <element signature="e#8252#8270#0" expanded="true" />
+            <element signature="e#8580#8601#0" expanded="true" />
+            <element signature="e#8910#8931#0" expanded="true" />
+            <element signature="e#9037#9055#0" expanded="true" />
+            <element signature="e#9326#9347#0" expanded="true" />
+            <element signature="e#9379#9400#0" expanded="true" />
+            <element signature="e#9506#9524#0" expanded="true" />
+            <element signature="e#9832#9853#0" expanded="true" />
+            <element signature="e#10160#10181#0" expanded="true" />
+            <element signature="e#10287#10305#0" expanded="true" />
+            <element signature="e#10492#12995#0" />
+            <element signature="e#10731#10754#0" expanded="true" />
+            <element signature="e#11197#11226#0" expanded="true" />
+            <element signature="e#11260#11279#0" expanded="true" />
+            <element signature="e#11659#11680#0" expanded="true" />
+            <element signature="e#12226#12247#0" expanded="true" />
+            <element signature="e#12654#12676#0" expanded="true" />
+            <element signature="e#12702#12725#0" expanded="true" />
+            <element signature="e#12800#12819#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw480dp/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="318" column="41" selection-start-line="318" selection-start-column="41" selection-end-line="318" selection-end-column="41" />
+          <folding>
+            <element signature="e#39#13038#0" />
+            <element signature="e#807#830#0" expanded="true" />
+            <element signature="e#868#891#0" expanded="true" />
+            <element signature="e#1293#1315#0" expanded="true" />
+            <element signature="e#1742#1763#0" expanded="true" />
+            <element signature="e#1795#1818#0" expanded="true" />
+            <element signature="e#1927#1946#0" expanded="true" />
+            <element signature="e#2240#2261#0" expanded="true" />
+            <element signature="e#2372#2391#0" expanded="true" />
+            <element signature="e#2744#2766#0" expanded="true" />
+            <element signature="e#2804#2827#0" expanded="true" />
+            <element signature="e#3209#3230#0" expanded="true" />
+            <element signature="e#3704#3726#0" expanded="true" />
+            <element signature="e#4094#4117#0" expanded="true" />
+            <element signature="e#4151#4173#0" expanded="true" />
+            <element signature="e#4591#4614#0" expanded="true" />
+            <element signature="e#4646#4669#0" expanded="true" />
+            <element signature="e#4778#4797#0" expanded="true" />
+            <element signature="e#5107#5130#0" expanded="true" />
+            <element signature="e#5236#5255#0" expanded="true" />
+            <element signature="e#5568#5589#0" expanded="true" />
+            <element signature="e#5621#5642#0" expanded="true" />
+            <element signature="e#5748#5766#0" expanded="true" />
+            <element signature="e#6068#6089#0" expanded="true" />
+            <element signature="e#6396#6417#0" expanded="true" />
+            <element signature="e#6523#6541#0" expanded="true" />
+            <element signature="e#6814#6835#0" expanded="true" />
+            <element signature="e#6867#6888#0" expanded="true" />
+            <element signature="e#6994#7012#0" expanded="true" />
+            <element signature="e#7319#7340#0" expanded="true" />
+            <element signature="e#7653#7674#0" expanded="true" />
+            <element signature="e#7780#7798#0" expanded="true" />
+            <element signature="e#8072#8093#0" expanded="true" />
+            <element signature="e#8125#8146#0" expanded="true" />
+            <element signature="e#8252#8270#0" expanded="true" />
+            <element signature="e#8580#8601#0" expanded="true" />
+            <element signature="e#8910#8931#0" expanded="true" />
+            <element signature="e#9037#9055#0" expanded="true" />
+            <element signature="e#9326#9347#0" expanded="true" />
+            <element signature="e#9379#9400#0" expanded="true" />
+            <element signature="e#9506#9524#0" expanded="true" />
+            <element signature="e#9832#9853#0" expanded="true" />
+            <element signature="e#10160#10181#0" expanded="true" />
+            <element signature="e#10287#10305#0" expanded="true" />
+            <element signature="e#10731#10754#0" expanded="true" />
+            <element signature="e#11197#11226#0" expanded="true" />
+            <element signature="e#11260#11279#0" expanded="true" />
+            <element signature="e#11659#11680#0" expanded="true" />
+            <element signature="e#12226#12247#0" expanded="true" />
+            <element signature="e#12654#12676#0" expanded="true" />
+            <element signature="e#12702#12725#0" expanded="true" />
+            <element signature="e#12800#12819#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw360dp/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="318" column="41" selection-start-line="318" selection-start-column="41" selection-end-line="318" selection-end-column="41" />
+          <folding>
+            <element signature="e#39#13038#0" />
+            <element signature="e#807#830#0" expanded="true" />
+            <element signature="e#868#891#0" expanded="true" />
+            <element signature="e#1293#1315#0" expanded="true" />
+            <element signature="e#1742#1763#0" expanded="true" />
+            <element signature="e#1795#1818#0" expanded="true" />
+            <element signature="e#1927#1946#0" expanded="true" />
+            <element signature="e#2240#2261#0" expanded="true" />
+            <element signature="e#2372#2391#0" expanded="true" />
+            <element signature="e#2744#2766#0" expanded="true" />
+            <element signature="e#2804#2827#0" expanded="true" />
+            <element signature="e#3209#3230#0" expanded="true" />
+            <element signature="e#3704#3726#0" expanded="true" />
+            <element signature="e#4094#4117#0" expanded="true" />
+            <element signature="e#4151#4173#0" expanded="true" />
+            <element signature="e#4591#4614#0" expanded="true" />
+            <element signature="e#4646#4669#0" expanded="true" />
+            <element signature="e#4778#4797#0" expanded="true" />
+            <element signature="e#5107#5130#0" expanded="true" />
+            <element signature="e#5236#5255#0" expanded="true" />
+            <element signature="e#5568#5589#0" expanded="true" />
+            <element signature="e#5621#5642#0" expanded="true" />
+            <element signature="e#5748#5766#0" expanded="true" />
+            <element signature="e#6068#6089#0" expanded="true" />
+            <element signature="e#6396#6417#0" expanded="true" />
+            <element signature="e#6523#6541#0" expanded="true" />
+            <element signature="e#6814#6835#0" expanded="true" />
+            <element signature="e#6867#6888#0" expanded="true" />
+            <element signature="e#6994#7012#0" expanded="true" />
+            <element signature="e#7319#7340#0" expanded="true" />
+            <element signature="e#7653#7674#0" expanded="true" />
+            <element signature="e#7780#7798#0" expanded="true" />
+            <element signature="e#8072#8093#0" expanded="true" />
+            <element signature="e#8125#8146#0" expanded="true" />
+            <element signature="e#8252#8270#0" expanded="true" />
+            <element signature="e#8580#8601#0" expanded="true" />
+            <element signature="e#8910#8931#0" expanded="true" />
+            <element signature="e#9037#9055#0" expanded="true" />
+            <element signature="e#9326#9347#0" expanded="true" />
+            <element signature="e#9379#9400#0" expanded="true" />
+            <element signature="e#9506#9524#0" expanded="true" />
+            <element signature="e#9832#9853#0" expanded="true" />
+            <element signature="e#10160#10181#0" expanded="true" />
+            <element signature="e#10287#10305#0" expanded="true" />
+            <element signature="e#10731#10754#0" expanded="true" />
+            <element signature="e#11197#11226#0" expanded="true" />
+            <element signature="e#11260#11279#0" expanded="true" />
+            <element signature="e#11659#11680#0" expanded="true" />
+            <element signature="e#12226#12247#0" expanded="true" />
+            <element signature="e#12654#12676#0" expanded="true" />
+            <element signature="e#12702#12725#0" expanded="true" />
+            <element signature="e#12800#12819#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="318" selection-end-column="41" />
+          <folding>
+            <element signature="e#39#11922#0" />
+            <element signature="e#743#766#0" expanded="true" />
+            <element signature="e#800#823#0" expanded="true" />
+            <element signature="e#1185#1207#0" expanded="true" />
+            <element signature="e#1598#1619#0" expanded="true" />
+            <element signature="e#1647#1670#0" expanded="true" />
+            <element signature="e#1767#1786#0" expanded="true" />
+            <element signature="e#2052#2073#0" expanded="true" />
+            <element signature="e#2172#2191#0" expanded="true" />
+            <element signature="e#2512#2534#0" expanded="true" />
+            <element signature="e#2568#2591#0" expanded="true" />
+            <element signature="e#2904#2925#0" expanded="true" />
+            <element signature="e#3388#3410#0" expanded="true" />
+            <element signature="e#3746#3769#0" expanded="true" />
+            <element signature="e#3799#3821#0" expanded="true" />
+            <element signature="e#4199#4222#0" expanded="true" />
+            <element signature="e#4250#4273#0" expanded="true" />
+            <element signature="e#4370#4389#0" expanded="true" />
+            <element signature="e#4671#4694#0" expanded="true" />
+            <element signature="e#4788#4807#0" expanded="true" />
+            <element signature="e#5092#5113#0" expanded="true" />
+            <element signature="e#5141#5162#0" expanded="true" />
+            <element signature="e#5256#5274#0" expanded="true" />
+            <element signature="e#5548#5569#0" expanded="true" />
+            <element signature="e#5848#5869#0" expanded="true" />
+            <element signature="e#5963#5981#0" expanded="true" />
+            <element signature="e#6230#6251#0" expanded="true" />
+            <element signature="e#6279#6300#0" expanded="true" />
+            <element signature="e#6394#6412#0" expanded="true" />
+            <element signature="e#6691#6712#0" expanded="true" />
+            <element signature="e#6997#7018#0" expanded="true" />
+            <element signature="e#7112#7130#0" expanded="true" />
+            <element signature="e#7380#7401#0" expanded="true" />
+            <element signature="e#7429#7450#0" expanded="true" />
+            <element signature="e#7544#7562#0" expanded="true" />
+            <element signature="e#7844#7865#0" expanded="true" />
+            <element signature="e#8146#8167#0" expanded="true" />
+            <element signature="e#8261#8279#0" expanded="true" />
+            <element signature="e#8526#8547#0" expanded="true" />
+            <element signature="e#8575#8596#0" expanded="true" />
+            <element signature="e#8690#8708#0" expanded="true" />
+            <element signature="e#8988#9009#0" expanded="true" />
+            <element signature="e#9288#9309#0" expanded="true" />
+            <element signature="e#9403#9421#0" expanded="true" />
+            <element signature="e#9811#9834#0" expanded="true" />
+            <element signature="e#10233#10262#0" expanded="true" />
+            <element signature="e#10292#10311#0" expanded="true" />
+            <element signature="e#10651#10672#0" expanded="true" />
+            <element signature="e#11170#11191#0" expanded="true" />
+            <element signature="e#11562#11584#0" expanded="true" />
+            <element signature="e#11606#11629#0" expanded="true" />
+            <element signature="e#11696#11715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw640dp/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="318" column="41" selection-start-line="318" selection-start-column="41" selection-end-line="318" selection-end-column="41" />
+          <folding>
+            <element signature="e#39#13038#0" />
+            <element signature="e#807#830#0" expanded="true" />
+            <element signature="e#868#891#0" expanded="true" />
+            <element signature="e#1293#1315#0" expanded="true" />
+            <element signature="e#1742#1763#0" expanded="true" />
+            <element signature="e#1795#1818#0" expanded="true" />
+            <element signature="e#1927#1946#0" expanded="true" />
+            <element signature="e#2240#2261#0" expanded="true" />
+            <element signature="e#2372#2391#0" expanded="true" />
+            <element signature="e#2744#2766#0" expanded="true" />
+            <element signature="e#2804#2827#0" expanded="true" />
+            <element signature="e#3209#3230#0" expanded="true" />
+            <element signature="e#3704#3726#0" expanded="true" />
+            <element signature="e#4094#4117#0" expanded="true" />
+            <element signature="e#4151#4173#0" expanded="true" />
+            <element signature="e#4591#4614#0" expanded="true" />
+            <element signature="e#4646#4669#0" expanded="true" />
+            <element signature="e#4778#4797#0" expanded="true" />
+            <element signature="e#5107#5130#0" expanded="true" />
+            <element signature="e#5236#5255#0" expanded="true" />
+            <element signature="e#5568#5589#0" expanded="true" />
+            <element signature="e#5621#5642#0" expanded="true" />
+            <element signature="e#5748#5766#0" expanded="true" />
+            <element signature="e#6068#6089#0" expanded="true" />
+            <element signature="e#6396#6417#0" expanded="true" />
+            <element signature="e#6523#6541#0" expanded="true" />
+            <element signature="e#6814#6835#0" expanded="true" />
+            <element signature="e#6867#6888#0" expanded="true" />
+            <element signature="e#6994#7012#0" expanded="true" />
+            <element signature="e#7319#7340#0" expanded="true" />
+            <element signature="e#7653#7674#0" expanded="true" />
+            <element signature="e#7780#7798#0" expanded="true" />
+            <element signature="e#8072#8093#0" expanded="true" />
+            <element signature="e#8125#8146#0" expanded="true" />
+            <element signature="e#8252#8270#0" expanded="true" />
+            <element signature="e#8580#8601#0" expanded="true" />
+            <element signature="e#8910#8931#0" expanded="true" />
+            <element signature="e#9037#9055#0" expanded="true" />
+            <element signature="e#9326#9347#0" expanded="true" />
+            <element signature="e#9379#9400#0" expanded="true" />
+            <element signature="e#9506#9524#0" expanded="true" />
+            <element signature="e#9832#9853#0" expanded="true" />
+            <element signature="e#10160#10181#0" expanded="true" />
+            <element signature="e#10287#10305#0" expanded="true" />
+            <element signature="e#10731#10754#0" expanded="true" />
+            <element signature="e#11197#11226#0" expanded="true" />
+            <element signature="e#11260#11279#0" expanded="true" />
+            <element signature="e#11659#11680#0" expanded="true" />
+            <element signature="e#12226#12247#0" expanded="true" />
+            <element signature="e#12654#12676#0" expanded="true" />
+            <element signature="e#12702#12725#0" expanded="true" />
+            <element signature="e#12800#12819#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw800dp/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="85" lean-forward="true" selection-start-line="1" selection-start-column="85" selection-end-line="1" selection-end-column="85" />
+          <folding>
+            <element signature="e#39#13038#0" />
+            <element signature="e#807#830#0" expanded="true" />
+            <element signature="e#868#891#0" expanded="true" />
+            <element signature="e#1293#1315#0" expanded="true" />
+            <element signature="e#1742#1763#0" expanded="true" />
+            <element signature="e#1795#1818#0" expanded="true" />
+            <element signature="e#1927#1946#0" expanded="true" />
+            <element signature="e#2240#2261#0" expanded="true" />
+            <element signature="e#2372#2391#0" expanded="true" />
+            <element signature="e#2744#2766#0" expanded="true" />
+            <element signature="e#2804#2827#0" expanded="true" />
+            <element signature="e#3209#3230#0" expanded="true" />
+            <element signature="e#3704#3726#0" expanded="true" />
+            <element signature="e#4094#4117#0" expanded="true" />
+            <element signature="e#4151#4173#0" expanded="true" />
+            <element signature="e#4591#4614#0" expanded="true" />
+            <element signature="e#4646#4669#0" expanded="true" />
+            <element signature="e#4778#4797#0" expanded="true" />
+            <element signature="e#5107#5130#0" expanded="true" />
+            <element signature="e#5236#5255#0" expanded="true" />
+            <element signature="e#5568#5589#0" expanded="true" />
+            <element signature="e#5621#5642#0" expanded="true" />
+            <element signature="e#5748#5766#0" expanded="true" />
+            <element signature="e#6068#6089#0" expanded="true" />
+            <element signature="e#6396#6417#0" expanded="true" />
+            <element signature="e#6523#6541#0" expanded="true" />
+            <element signature="e#6814#6835#0" expanded="true" />
+            <element signature="e#6867#6888#0" expanded="true" />
+            <element signature="e#6994#7012#0" expanded="true" />
+            <element signature="e#7319#7340#0" expanded="true" />
+            <element signature="e#7653#7674#0" expanded="true" />
+            <element signature="e#7780#7798#0" expanded="true" />
+            <element signature="e#8072#8093#0" expanded="true" />
+            <element signature="e#8125#8146#0" expanded="true" />
+            <element signature="e#8252#8270#0" expanded="true" />
+            <element signature="e#8580#8601#0" expanded="true" />
+            <element signature="e#8910#8931#0" expanded="true" />
+            <element signature="e#9037#9055#0" expanded="true" />
+            <element signature="e#9326#9347#0" expanded="true" />
+            <element signature="e#9379#9400#0" expanded="true" />
+            <element signature="e#9506#9524#0" expanded="true" />
+            <element signature="e#9832#9853#0" expanded="true" />
+            <element signature="e#10160#10181#0" expanded="true" />
+            <element signature="e#10287#10305#0" expanded="true" />
+            <element signature="e#10731#10754#0" expanded="true" />
+            <element signature="e#11197#11226#0" expanded="true" />
+            <element signature="e#11260#11279#0" expanded="true" />
+            <element signature="e#11659#11680#0" expanded="true" />
+            <element signature="e#12226#12247#0" expanded="true" />
+            <element signature="e#12654#12676#0" expanded="true" />
+            <element signature="e#12702#12725#0" expanded="true" />
+            <element signature="e#12800#12819#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
         </state>
       </provider>
     </entry>

@@ -72,9 +72,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
 
                 if (it!![0].weatherText == "Rain" || it[0].weatherText == "Light rain"|| it[0].weatherText == "A shower") {
 
-
                     bg_weather_infor.setBackgroundColor(Color.parseColor("#48aca2"))
-                    ivSttWeather.setImageResource(R.drawable.ic_sun)
                 }
 
                 val getDegree = SharePrefs().getInstance()[Common.KEY_TYPE_DEGREE_CUSTOM_SELECTED, Int::class.java]
@@ -93,6 +91,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
 
                     }
                 }
+
                 val getHumidity = SharePrefs().getInstance()[Common.KEY_TYPE_HUMIDITY_CUSTOM_SELECTED, Int::class.java]
                 when (getHumidity) {
                     Common.Type_HUMIDITY_PERCENT -> {
@@ -107,6 +106,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
                         )}g/m3"
                     }
                 }
+
                 val getWind = SharePrefs().getInstance()[Common.KEY_TYPE_WIND_CUSTOM_SELECTED, Int::class.java]
                 when (getWind) {
                     Common.Type_WIND_KM -> {
@@ -237,11 +237,8 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
 
                             bg_weather_infor.setBackgroundColor(Color.parseColor("#343434"))
 
-
                     } else {
-
                             bg_weather_infor.setBackgroundColor(Color.parseColor("#d45e5e"))
-
 
                     }
                 }
@@ -293,8 +290,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
             isSearchCity =true
             val citySql = CitySql(
                 data!!.key!!,
-                data!!.localizedName!!,
-                data!!.country.localizedName!!
+                data!!.localizedName!!
             )
             db.addCity(citySql)
             tvLabelLocation.text = data!!.localizedName
@@ -329,14 +325,14 @@ class MainActivity : BaseActivity(), View.OnClickListener, IclickItemGetCity {
                     if (data?.key != null) {
                         mWeatherViewmodel.getDataWeatherCurrent(data?.key!!, Key, true)
                         mWeatherViewmodel.getDataWeather5days(data!!.key!!, Key, true)
-                        Toast.makeText(this, "Refresh Weather success ", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.alert_refresh_success, Toast.LENGTH_SHORT).show()
                     }
 
                 } else {
                     if (citysql?.key != null) {
                         mWeatherViewmodel.getDataWeatherCurrent(citysql?.key!!, Key, true)
                         mWeatherViewmodel.getDataWeather5days(citysql?.key!!, Key, true)
-                        Toast.makeText(this, "Refresh Weather success ", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, R.string.alert_refresh_success, Toast.LENGTH_SHORT).show()
                     }
                 }
             }

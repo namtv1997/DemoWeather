@@ -26,7 +26,7 @@ class SqliteCityAdapter(private var listCitySql: List<CitySql>, var onclickiItem
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(citySql: CitySql) = with(itemView) {
             tvItemGetCity.text = citySql.localizedName
-            tvItemGetCountry.text=citySql.localizedNameCountry
+
         }
 
     }

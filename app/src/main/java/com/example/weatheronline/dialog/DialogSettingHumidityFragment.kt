@@ -33,8 +33,7 @@ class DialogSettingHumidityFragment : DialogFragment() {
             }
 
         }
-
-        tvLabelCancel.setOnClickListener {
+        rdGroupHumidity.setOnCheckedChangeListener { group, checkedId ->
             Common.stateDegree = index
             val radioButtonID = rdGroupHumidity.checkedRadioButtonId
             val radioButton = rdGroupHumidity.findViewById<RadioButton>(radioButtonID)
@@ -42,6 +41,9 @@ class DialogSettingHumidityFragment : DialogFragment() {
             Common.stateDegree = index
             SharePrefs().getInstance().put(Common.KEY_TYPE_HUMIDITY_CUSTOM_SELECTED, index)
             (activity as SettingActivity).upDateHumidity()
+        }
+
+        tvLabelCancel.setOnClickListener {
             dismiss()
         }
     }
