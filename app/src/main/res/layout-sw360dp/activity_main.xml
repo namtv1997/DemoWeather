@@ -156,6 +156,7 @@
             android:text="37º"
             android:textColor="@color/white"
             android:textSize="@dimen/font_large"
+            app:layout_constraintEnd_toEndOf="@+id/tvTueDay"
             app:layout_constraintLeft_toLeftOf="@id/tvTueDay"
             app:layout_constraintTop_toBottomOf="@id/ivSttTue" />
 
@@ -187,6 +188,7 @@
             android:text="36º"
             android:textColor="@color/white"
             android:textSize="@dimen/font_large"
+            app:layout_constraintEnd_toEndOf="@+id/tvWednesday"
             app:layout_constraintLeft_toLeftOf="@id/tvWednesday"
             app:layout_constraintTop_toBottomOf="@id/ivSttWed" />
 
@@ -218,6 +220,7 @@
             android:text="39º"
             android:textColor="@color/white"
             android:textSize="@dimen/font_large"
+            app:layout_constraintEnd_toEndOf="@+id/tvThurday"
             app:layout_constraintLeft_toLeftOf="@id/tvThurday"
             app:layout_constraintTop_toBottomOf="@id/ivSttThu" />
 
@@ -249,6 +252,7 @@
             android:text="34º"
             android:textColor="@color/white"
             android:textSize="@dimen/font_large"
+            app:layout_constraintEnd_toEndOf="@+id/tvFriDay"
             app:layout_constraintLeft_toLeftOf="@id/tvFriDay"
             app:layout_constraintTop_toBottomOf="@id/ivSttFri" />
 
