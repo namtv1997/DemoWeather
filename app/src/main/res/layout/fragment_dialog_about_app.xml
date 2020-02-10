@@ -6,7 +6,7 @@
     android:gravity="center"
     android:padding="@dimen/font_large"
     android:orientation="vertical"
-    tools:context=".dialog.DialogAboutAppFragment">
+    tools:context=".ui.weather.dialog.DialogAboutAppFragment">
 
     <TextView
         style="@style/TextTitleLarge"

@@ -1,4 +1,4 @@
-package com.example.weatheronline.adapter
+package com.example.weatheronline.ui.weather.main
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -11,7 +11,11 @@ import kotlinx.android.synthetic.main.item_get_city.view.*
 class SqliteCityAdapter(private var listCitySql: List<CitySql>, var onclickiItemListener: IclickItemGetCity) :
     RecyclerView.Adapter<SqliteCityAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_get_city, parent, false))
+        return ViewHolder(
+            LayoutInflater.from(
+                parent.context
+            ).inflate(R.layout.item_get_city, parent, false)
+        )
     }
 
     override fun getItemCount(): Int = listCitySql.size
@@ -26,7 +30,6 @@ class SqliteCityAdapter(private var listCitySql: List<CitySql>, var onclickiItem
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(citySql: CitySql) = with(itemView) {
             tvItemGetCity.text = citySql.localizedName
-
         }
 
     }

@@ -1,4 +1,4 @@
-package com.example.weatheronline.dialog
+package com.example.weatheronline.ui.weather.dialog
 
 import android.graphics.Point
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.*
 import android.widget.RadioButton
 import com.example.weatheronline.R
 import com.example.weatheronline.common.Common
-import com.example.weatheronline.ui.weather.SettingActivity
+import com.example.weatheronline.ui.weather.setting.SettingActivity
 import kotlinx.android.synthetic.main.fragment_dialog_setting_win_speed.*
 import namhenry.com.vn.projectweek4.utills.SharePrefs
 

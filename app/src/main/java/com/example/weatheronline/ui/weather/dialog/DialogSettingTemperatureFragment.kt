@@ -1,4 +1,4 @@
-package com.example.weatheronline.dialog
+package com.example.weatheronline.ui.weather.dialog
 
 
 import android.graphics.Point
@@ -9,43 +9,51 @@ import android.widget.RadioButton
 
 import com.example.weatheronline.R
 import com.example.weatheronline.common.Common
-import com.example.weatheronline.ui.weather.SettingActivity
-import kotlinx.android.synthetic.main.fragment_dialog_setting_humidity.*
+import com.example.weatheronline.ui.weather.setting.SettingActivity
+import kotlinx.android.synthetic.main.fragment_dialog_setting_temperature.*
 import namhenry.com.vn.projectweek4.utills.SharePrefs
 
-class DialogSettingHumidityFragment : DialogFragment() {
+class DialogSettingTemperatureFragment : DialogFragment() {
 
     var index = 0
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        return inflater.inflate(R.layout.fragment_dialog_setting_humidity, container, false)
+        return inflater.inflate(R.layout.fragment_dialog_setting_temperature, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        when (Common.stateDegree) {
-            Common.Type_HUMIDITY_PERCENT -> {
-                rdGroupHumidity.check(R.id.rdPercent)
-            }
-            Common.Type_HUMIDITY_ABSOLUTE -> {
-                rdGroupHumidity.check(R.id.rdAbsolute)
-            }
 
+        when (Common.stateDegree) {
+            Common.Type_Degree_C -> {
+                rdGroup.check(R.id.rbCdegree)
+            }
+            Common.Type_Degree_F -> {
+                rdGroup.check(R.id.rbFdegree)
+            }
+            Common.Type_Degree_K -> {
+                rdGroup.check(R.id.rbKdegree)
+            }
         }
-        rdGroupHumidity.setOnCheckedChangeListener { group, checkedId ->
+
+        rdGroup.setOnCheckedChangeListener { group, checkedId ->
             Common.stateDegree = index
-            val radioButtonID = rdGroupHumidity.checkedRadioButtonId
-            val radioButton = rdGroupHumidity.findViewById<RadioButton>(radioButtonID)
-            index = rdGroupHumidity.indexOfChild(radioButton)
+            val radioButtonID = rdGroup.checkedRadioButtonId
+            val radioButton = rdGroup.findViewById<RadioButton>(radioButtonID)
+            index = rdGroup.indexOfChild(radioButton)
             Common.stateDegree = index
-            SharePrefs().getInstance().put(Common.KEY_TYPE_HUMIDITY_CUSTOM_SELECTED, index)
-            (activity as SettingActivity).upDateHumidity()
+            SharePrefs().getInstance().put(Common.KEY_TYPE_DEGREE_CUSTOM_SELECTED, index)
+            (activity as SettingActivity).upDateDegree()
+
         }
 
         tvLabelCancel.setOnClickListener {
+
             dismiss()
         }
+
+
     }
 
     override fun onResume() {

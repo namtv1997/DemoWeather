@@ -1,4 +1,4 @@
-package com.example.weatheronline.adapter
+package com.example.weatheronline.ui.weather.searchcity
 
 
 
@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.weatheronline.R
 import com.example.weatheronline.model.cityresult.CityResult
-import com.example.weatheronline.model.weathercurentday.WeatherCurent
 import kotlinx.android.synthetic.main.item_search_city.view.*
 
 class SearchCityAdapter(private var listCity: ArrayList<CityResult>, var onclickiItemListener: IClickItemListener) :

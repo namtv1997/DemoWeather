@@ -1,17 +1,15 @@
-package com.example.weatheronline.ui.weather
+package com.example.weatheronline.ui.weather.setting
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Toast
 import com.example.weatheronline.R
 import com.example.weatheronline.base.BaseActivity
 import com.example.weatheronline.common.Common
-import com.example.weatheronline.dialog.DialogAboutAppFragment
-import com.example.weatheronline.dialog.DialogSettingHumidityFragment
-import com.example.weatheronline.dialog.DialogSettingTemperatureFragment
-import com.example.weatheronline.dialog.DialogSettingWinSpeedFragment
+import com.example.weatheronline.ui.weather.dialog.DialogAboutAppFragment
+import com.example.weatheronline.ui.weather.dialog.DialogSettingHumidityFragment
+import com.example.weatheronline.ui.weather.dialog.DialogSettingTemperatureFragment
+import com.example.weatheronline.ui.weather.dialog.DialogSettingWinSpeedFragment
 import kotlinx.android.synthetic.main.activity_setting.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 import namhenry.com.vn.projectweek4.utills.SharePrefs
@@ -19,10 +17,10 @@ import namhenry.com.vn.projectweek4.utills.SharePrefs
 class SettingActivity : BaseActivity(), View.OnClickListener {
 
 
-    private  var mDialogSettingHumidityFragment:DialogSettingHumidityFragment?= null
-    private  var mDialogSettingTemperatureFragment:DialogSettingTemperatureFragment?= null
-    private  var mDialogSettingWinSpeedFragment:DialogSettingWinSpeedFragment?= null
-    private  var mDialogAboutAppFragment:DialogAboutAppFragment?= null
+    private  var mDialogSettingHumidityFragment: DialogSettingHumidityFragment?= null
+    private  var mDialogSettingTemperatureFragment: DialogSettingTemperatureFragment?= null
+    private  var mDialogSettingWinSpeedFragment: DialogSettingWinSpeedFragment?= null
+    private  var mDialogAboutAppFragment: DialogAboutAppFragment?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -89,19 +87,23 @@ class SettingActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.llTemperature->{
-                mDialogSettingTemperatureFragment=DialogSettingTemperatureFragment()
+                mDialogSettingTemperatureFragment=
+                    DialogSettingTemperatureFragment()
                 mDialogSettingTemperatureFragment?.show(this.supportFragmentManager, "")
             }
             R.id.llHumidity->{
-                mDialogSettingHumidityFragment=DialogSettingHumidityFragment()
+                mDialogSettingHumidityFragment=
+                    DialogSettingHumidityFragment()
                 mDialogSettingHumidityFragment?.show(this.supportFragmentManager, "")
             }
             R.id.llWindSpeed->{
-                mDialogSettingWinSpeedFragment=DialogSettingWinSpeedFragment()
+                mDialogSettingWinSpeedFragment=
+                    DialogSettingWinSpeedFragment()
                 mDialogSettingWinSpeedFragment?.show(this.supportFragmentManager, "")
             }
             R.id.tvLabelAbout->{
-                mDialogAboutAppFragment=DialogAboutAppFragment()
+                mDialogAboutAppFragment=
+                    DialogAboutAppFragment()
                 mDialogAboutAppFragment?.show(this.supportFragmentManager, "")
             }
         }

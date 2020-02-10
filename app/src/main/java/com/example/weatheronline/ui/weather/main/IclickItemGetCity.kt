@@ -1,4 +1,4 @@
-package com.example.weatheronline.adapter
+package com.example.weatheronline.ui.weather.main
 
 
 import com.example.weatheronline.model.sqlite.CitySql

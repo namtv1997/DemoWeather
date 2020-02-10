@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.facebook.fresco:nativeimagefilters:1.11.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-1.11.0.aar/0048d3ebd108b96e7498737de95edab6/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-1.11.0.aar/0048d3ebd108b96e7498737de95edab6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-1.11.0.aar/83f64ee2cb095edff2785ebfb3fc8a87/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-1.11.0.aar/83f64ee2cb095edff2785ebfb3fc8a87/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

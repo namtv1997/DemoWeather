@@ -1,4 +1,4 @@
-package com.example.weatheronline.ui.weather
+package com.example.weatheronline.ui.weather.searchcity
 
 
 import android.content.Intent
@@ -9,8 +9,6 @@ import android.text.TextWatcher
 import android.view.View
 import com.example.mockproject.retrofit2.DataClient
 import com.example.mockproject.retrofit2.RetrofitClient
-import com.example.weatheronline.adapter.IClickItemListener
-import com.example.weatheronline.adapter.SearchCityAdapter
 import com.example.weatheronline.base.BaseActivity
 import com.example.weatheronline.model.cityresult.CityResult
 import com.jakewharton.rxbinding2.widget.RxTextView
@@ -25,9 +23,12 @@ import java.util.concurrent.TimeUnit
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.view.KeyEvent
+import com.example.weatheronline.R
+import com.example.weatheronline.ui.weather.main.MainActivity
 
 
-class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListener {
+class SearchCityActivity : BaseActivity(), View.OnClickListener,
+    IClickItemListener {
 
 
     private lateinit var AdapterSearchCity: SearchCityAdapter
@@ -36,7 +37,8 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
     private var listNameCity = ArrayList<CityResult>()
     private val disposable = CompositeDisposable()
 
-    private var dataClient: DataClient = RetrofitClient.getClient()?.create(DataClient::class.java)!!
+    private var dataClient: DataClient =
+        RetrofitClient.getClient()?.create(DataClient::class.java)!!
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,8 +73,8 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
 
         edtSearch.setOnEditorActionListener(object : TextView.OnEditorActionListener {
             override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
-                if (actionId==EditorInfo.IME_ACTION_SEARCH){
-                    if (listNameCity.size==1){
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                    if (listNameCity.size == 1) {
                         val intent = Intent(this@SearchCityActivity, MainActivity::class.java)
                         val bundle = Bundle()
                         bundle.putParcelable("dataCity", listNameCity[0])
@@ -87,20 +89,31 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
     }
 
 
-
     override fun onClick(v: View?) {
         when (v?.id) {
-            com.example.weatheronline.R.id.ivBack -> {
+            R.id.ivBack -> {
                 finish()
             }
-            com.example.weatheronline.R.id.ivCancel -> {
+            R.id.ivCancel -> {
                 edtSearch.setText("")
             }
         }
     }
 
+    override fun onItemClick(city: CityResult) {
+        val intent = Intent(this, MainActivity::class.java)
+        val bundle = Bundle()
+        bundle.putParcelable("dataCity", city)
+        intent.putExtras(bundle)
+        startActivity(intent)
+    }
 
-    private fun initObserver(){
+    override fun onDestroy() {
+        super.onDestroy()
+        disposable.clear()
+    }
+
+    private fun initObserver() {
         disposable.add(
             publishSubject.debounce(300, TimeUnit.MILLISECONDS)
                 .distinctUntilChanged()
@@ -135,7 +148,8 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
     }
 
     private fun initAdapter() {
-        AdapterSearchCity = SearchCityAdapter(listNameCity, this)
+        AdapterSearchCity =
+            SearchCityAdapter(listNameCity, this)
         rvSearchCity.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
@@ -156,22 +170,6 @@ class SearchCityActivity : BaseActivity(), View.OnClickListener, IClickItemListe
 
             override fun onComplete() {}
         }
-    }
-
-    override fun onItemClick(city: CityResult) {
-        val intent = Intent(this, MainActivity::class.java)
-        val bundle = Bundle()
-        bundle.putParcelable("dataCity", city)
-        intent.putExtras(bundle)
-        startActivity(intent)
-
-
-    }
-
-
-    override fun onDestroy() {
-        super.onDestroy()
-        disposable.clear()
     }
 }
 

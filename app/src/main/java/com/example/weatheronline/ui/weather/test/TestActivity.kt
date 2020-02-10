@@ -1,4 +1,4 @@
-package com.example.weatheronline.ui.weather
+package com.example.weatheronline.ui.weather.test
 
 
 import android.os.Bundle

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="@dimen/spacing_small"
-    tools:context=".dialog.DialogSettingWinSpeedFragment">
+    tools:context=".ui.weather.dialog.DialogSettingWinSpeedFragment">
 
     <TextView
         style="@style/TextContentLarge"

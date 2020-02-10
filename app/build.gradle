@@ -59,4 +59,6 @@ dependencies {
     implementation "android.arch.work:work-runtime-ktx:$work_version"
     implementation "com.github.mancj:MaterialSearchBar:0.8.2"
     implementation "com.jakewharton.rxbinding2:rxbinding:2.0.0"
+    /*EasyPermission to handle permission on Android 5.0 above*/
+    implementation "pub.devrel:easypermissions:1.2.0"
 }

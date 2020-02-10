@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.weather.MainActivity">
+    tools:context=".ui.weather.main.MainActivity">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/bg_weather_infor"

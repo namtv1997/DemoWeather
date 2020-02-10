@@ -1,4 +1,4 @@
-package com.example.weatheronline.dialog
+package com.example.weatheronline.ui.weather.dialog
 
 
 

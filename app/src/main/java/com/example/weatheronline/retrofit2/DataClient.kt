@@ -2,6 +2,7 @@ package com.example.mockproject.retrofit2
 
 import com.example.weatheronline.model.weatherresult.WeatherResult
 import com.example.weatheronline.model.cityresult.CityResult
+import com.example.weatheronline.model.geoposition.GeoPositionSearch
 import com.example.weatheronline.model.weathercurentday.WeatherCurent
 import io.reactivex.Observable
 import io.reactivex.Single
@@ -17,6 +18,12 @@ interface DataClient {
         @Query("apikey") apikey: String,
         @Query("details") details: Boolean
     ): Observable<WeatherResult>
+
+    @GET("locations/v1/cities/geoposition/search")
+    fun getWeatherDataByGeoPositionSearch(
+        @Query("apikey") apikey: String,
+        @Query("q") q: String
+    ): Observable<GeoPositionSearch>
 
     @GET("/currentconditions/v1/{keyRegion}")
     fun getWeatherDataCurrent(

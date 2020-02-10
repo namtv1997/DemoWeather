@@ -15,10 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.weather.SearchCityActivity"></activity>
-        <activity android:name=".ui.weather.SettingActivity" />
-        <activity android:name=".ui.weather.TestActivity" />
-        <activity android:name=".ui.weather.MainActivity">
+        <activity android:name=".ui.weather.searchcity.SearchCityActivity"></activity>
+        <activity android:name=".ui.weather.setting.SettingActivity" />
+        <activity android:name=".ui.weather.test.TestActivity" />
+        <activity android:name=".ui.weather.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
